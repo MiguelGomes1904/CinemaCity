@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="english">
+  <head>
+    <title>exported project</title>
+    <meta property="og:title" content="exported project" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <link rel="stylesheet" href="styles.css"/>
+
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;  -webkit-font-smoothing: antialiased;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;  color: inherit;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}pre {  white-space: normal;}input {  padding: 2px 4px;}img {  display: block;}details {  display: block;  margin: 0;  padding: 0;}summary::-webkit-details-marker {  display: none;}[data-thq="accordion"] [data-thq="accordion-content"] {  max-height: 0;  overflow: hidden;  transition: max-height 0.3s ease-in-out;  padding: 0;}[data-thq="accordion"] details[data-thq="accordion-trigger"][open] + [data-thq="accordion-content"] {  max-height: 1000vh;}details[data-thq="accordion-trigger"][open] summary [data-thq="accordion-icon"] {  transform: rotate(180deg);}html { scroll-behavior: smooth  }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Inter;
+        font-size: 16px;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.15;
+        color: var(--dl-color-theme-neutral-dark);
+        background: var(--dl-color-theme-neutral-light);
+
+        fill: var(--dl-color-theme-neutral-dark);
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/animate.css@4.1.1/animate.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
+    />
+  </head>
+  <body>
+    <link rel="stylesheet" href="./style.css" />
+    <div>
+      <link href="./index.css" rel="stylesheet" />
+
+      <div class="cinema20-container1">
+        <div class="cinema20-cinema20">
+          <img
+            alt="Rectangle231114"
+            src="public/rectangle231114-nbra-1200h.png"
+            class="cinema20-rectangle23"
+          />
+          <img
+            alt="Rectangle241115"
+            src="public/rectangle241115-dc4r-700h.png"
+            class="cinema20-rectangle24"
+          />
+          <img
+            alt="cinema11116"
+            src="public/cinema11116-ielb-1800w.png"
+            class="cinema20-cinema1"
+          />
+          <span class="cinema20-text10">Cinema City</span>
+          <span class="cinema20-text11">
+            <span>
+              O Cinema City é uma das principais redes de cinemas em Portugal,
+              com complexos modernos e salas equipadas para garantir a melhor
+              experiência no grande ecrã.
+            </span>
+            <br />
+            <span>
+              Vem viver o cinema connosco e descobre também os nossos formatos
+              especiais, pensados para tornar cada sessão ainda mais
+              emocionante.
+            </span>
+          </span>
+          <img
+            alt="Rectangle11119"
+            src="public/rectangle11119-ax2-200h.png"
+            class="cinema20-rectangle1"
+          />
+          <img
+            alt="logo11120"
+            src="public/logo11120-f6it-200h.png"
+            class="cinema20-logo1"
+          />
+          <span class="cinema20-text15">PRODUTOS</span>
+          <span class="cinema20-text16">SERVIÇOS</span>
+          <span class="cinema20-text17">CINEMAS</span>
+          <span class="cinema20-text18">DESTAQUES</span>
+          <span class="cinema20-text19">MAIS CINEMA CITY</span>
+          <div class="cinema20-group1">
+            <span class="cinema20-text20">
+              Pesquise por filme, actores, realizadores
+            </span>
+            <img
+              alt="Searchalt1129"
+              src="public/searchalt1129-0n1a.svg"
+              class="cinema20-searchalt"
+            />
+          </div>
+          <span class="cinema20-text21">Parcerias</span>
+          <span class="cinema20-text22">Contactos</span>
+          <span class="cinema20-text23">Festas Aniversário</span>
+          <span class="cinema20-text24">Publicidade</span>
+          <span class="cinema20-text25">Trabalhe connosco</span>
+          <span class="cinema20-text26">Normas Cinema City</span>
+          <img
+            alt="banner11139"
+            src="public/banner11139-acad-1500w.png"
+            class="cinema20-banner1"
+          />
+          <img
+            alt="promo1140"
+            src="public/promo1140-kf0n-400h.png"
+            class="cinema20-promo"
+          />
+          <img
+            alt="promo21141"
+            src="public/promo21141-zzne-400h.png"
+            class="cinema20-promo2"
+          />
+          <img
+            alt="Line21142"
+            src="public/line21142-h4ap.svg"
+            class="cinema20-line2"
+          />
+          <span class="cinema20-text27">Cinema City</span>
+          <span class="cinema20-text28">Serviços Exclusivos</span>
+          <span class="cinema20-text29">Mais Cinema City</span>
+          <span class="cinema20-text30">
+            <span>
+              No Cinema City, queremos premiar os verdadeiros fãs de cinema, os
+              que não perdem uma única
+            </span>
+            <br />
+            <span>oportunidade para nos visitar.</span>
+          </span>
+          <span class="cinema20-text34">CINEMAS</span>
+          <img
+            alt="maiscinemacity11148"
+            src="public/maiscinemacity11148-0sb-500h.png"
+            class="cinema20-maiscinemacity1"
+          />
+          <span class="cinema20-text35">
+            Foi a pensar neles que desenvolvemos o&nbsp;MAIS CINEMA
+            CITY,&nbsp;um programa de atribuição de pontos que premeia os
+            clientes mais assíduos. Os pontos ganhos podem ser trocados por
+            prémios, a utilizar nas próximas visitas aos nossos cinemas.&nbsp;
+          </span>
+          <img
+            alt="Rectangle301150"
+            src="public/rectangle301150-gvo5-200h.png"
+            class="cinema20-rectangle30"
+          />
+          <span class="cinema20-text36">TABELA DE PONTOS</span>
+          <span class="cinema20-text37">Vai perder esta oportunidade?</span>
+          <img
+            alt="Expanddown1153"
+            src="public/expanddown1153-th6e.svg"
+            class="cinema20-expanddown"
+          />
+          <div class="cinema20-group3">
+            <img
+              alt="Rectangle251155"
+              src="public/rectangle251155-w85o-300w.png"
+              class="cinema20-rectangle251"
+            />
+            <img
+              alt="Rectangle311156"
+              src="public/rectangle311156-xx2-200h.png"
+              class="cinema20-rectangle311"
+            />
+            <span class="cinema20-text38">Alfragide</span>
+          </div>
+          <div class="cinema20-group4">
+            <img
+              alt="Rectangle251159"
+              src="public/rectangle251159-qhb-300w.png"
+              class="cinema20-rectangle252"
+            />
+            <img
+              alt="Rectangle311160"
+              src="public/rectangle311160-rx57-200h.png"
+              class="cinema20-rectangle312"
+            />
+            <span class="cinema20-text39">Alvalade</span>
+          </div>
+          <div class="cinema20-group5">
+            <img
+              alt="Rectangle251163"
+              src="public/rectangle251163-hrl-300w.png"
+              class="cinema20-rectangle253"
+            />
+            <img
+              alt="Rectangle311164"
+              src="public/rectangle311164-ls6g-200h.png"
+              class="cinema20-rectangle313"
+            />
+            <span class="cinema20-text40">Campo P.</span>
+          </div>
+          <div class="cinema20-group6">
+            <img
+              alt="Rectangle251167"
+              src="public/rectangle251167-u32m-300w.png"
+              class="cinema20-rectangle254"
+            />
+            <img
+              alt="Rectangle311168"
+              src="public/rectangle311168-7cll-200h.png"
+              class="cinema20-rectangle314"
+            />
+            <span class="cinema20-text41">Setúbal</span>
+          </div>
+          <div class="cinema20-group7">
+            <img
+              alt="Rectangle251171"
+              src="public/rectangle251171-r428-300w.png"
+              class="cinema20-rectangle255"
+            />
+            <img
+              alt="Rectangle311172"
+              src="public/rectangle311172-sldp-200h.png"
+              class="cinema20-rectangle315"
+            />
+            <span class="cinema20-text42">Leiria</span>
+          </div>
+          <img
+            alt="Line31174"
+            src="public/line31174-um4nk.svg"
+            class="cinema20-line3"
+          />
+        </div>
+        <a href="https://play.teleporthq.io/signup" class="cinema20-link">
+          <div aria-label="Sign up to TeleportHQ" class="cinema20-container2">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 19 21"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="cinema20-icon1"
+            >
+              <path
+                d="M9.1017 4.64355H2.17867C0.711684 4.64355 -0.477539 5.79975 -0.477539 7.22599V13.9567C-0.477539 15.3829 0.711684 16.5391 2.17867 16.5391H9.1017C10.5687 16.5391 11.7579 15.3829 11.7579 13.9567V7.22599C11.7579 5.79975 10.5687 4.64355 9.1017 4.64355Z"
+                fill="#B23ADE"
+              ></path>
+              <path
+                d="M10.9733 12.7878C14.4208 12.7878 17.2156 10.0706 17.2156 6.71886C17.2156 3.3671 14.4208 0.649963 10.9733 0.649963C7.52573 0.649963 4.73096 3.3671 4.73096 6.71886C4.73096 10.0706 7.52573 12.7878 10.9733 12.7878Z"
+                fill="#FF5C5C"
+              ></path>
+              <path
+                d="M17.7373 13.3654C19.1497 14.1588 19.1497 15.4634 17.7373 16.2493L10.0865 20.5387C8.67402 21.332 7.51855 20.6836 7.51855 19.0968V10.5141C7.51855 8.92916 8.67402 8.2807 10.0865 9.07221L17.7373 13.3654Z"
+                fill="#2874DE"
+              ></path>
+            </svg>
+            <span class="cinema20-text43">Built in TeleportHQ</span>
+          </div>
+        </a>
+      </div>
+      <link
+        rel="canonical"
+        href="https://cinemacity20-9qau7r.teleporthq.app/"
+      />
+    </div>
+  </body>
+</html>
