@@ -313,3 +313,6 @@ MIT License - feel free to use this project for your own website!
 ## AI Assistant Guidance
 
 For AI-driven code contributions, consult the [Copilot instructions](./.github/copilot-instructions.md) to understand project architecture, workflows, and template conventions.
+#   m e u - w e b s i t e - 2 5 - 2 6  
+ #   m e u - w e b s i t e - 2 5 - 2 6  
+ 
