@@ -8,40 +8,21 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="logo"><img src="assets/logo.png" alt="Cinema City Logo"></div>
-            <ul class="nav-links">
-                <li><a href="#">Produtos</a></li>
-                <li><a href="#">Serviços</a></li>
-                <li><a href="#">Cinemas</a></li>
-                <li><a href="#">Destaques</a></li>
-            </ul>
-            <div class="search-login">
-                <input type="text" placeholder="Pesquise por filme, actores, realizadores">
-                <?php if (isset($_SESSION['user_email'])): ?>
-                    <button class="login-btn" onclick="window.location.href='index.php?logout=1'" style="background: #d32f2f;">Logout (<?php echo htmlspecialchars($_SESSION['user_name']); ?>)</button>
-                    <?php if (isset($_GET['logout']) && $_GET['logout'] == 1) {
-                        session_destroy();
-                        header('Location: index.php');
-                        exit();
-                    } ?>
-                <?php else: ?>
-                    <button class="login-btn" onclick="window.location.href='login.php'">Login</button>
-                <?php endif; ?>
+    <?php include 'header.php'; ?>
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h2>Colin Farrell & Margot Robbie</h2>
+            <h1>Uma Grande, Corajosa e Bela Viagem</h1>
+            <p>Exclusivo em cinemas<br>18 de Setembro</p>
+            <div class="carousel-dots">
+                    <span data-index="0" class="active"></span>
+                    <span data-index="1"></span>
+                    <span data-index="2"></span>
+                    <span data-index="3"></span>
+                    <span data-index="4"></span>
             </div>
-        </nav>
-        <section class="hero" style="background-image: url('assets/FUNDO.jpg');">
-            <div class="hero-content">
-                <h2>Colin Farrell & Margot Robbie</h2>
-                <h1>Uma Grande, Corajosa e Bela Viagem</h1>
-                <p>Exclusivo em cinemas<br>18 de Setembro</p>
-                <div class="carousel-dots">
-                    <span></span><span></span><span></span><span></span><span></span>
-                </div>
-            </div>
-        </section>
-    </header>
+        </div>
+    </section>
     <section class="booking-bar">
         <select><option>Escolha um Cinema</option></select>
         <select><option>Escolha um Filme</option></select>
@@ -65,7 +46,7 @@
         <!-- Cartazes dos filmes -->
         <div class="movies">
             <div class="movie-card">
-                <img src="assets/capa1.jpg" alt="Depois da Caçaça">
+                <a href="movie.php?id=1"><img src="assets/capa1.jpg" alt="Depois da Caçaça"></a>
                 <div class="movie-info">
                     <h3>DEPOIS DA CAÇAÇA</h3>
                     <p class="genre">Animação</p>
@@ -73,7 +54,7 @@
                 </div>
             </div>
             <div class="movie-card">
-                <img src="assets/capa 2.jpg" alt="Gato Fantasma Anzu">
+                <a href="movie.php?id=2"><img src="assets/capa 2.jpg" alt="Gato Fantasma Anzu"></a>
                 <div class="movie-info">
                     <h3>GATO FANTASMA ANZU</h3>
                     <p class="genre">Animação</p>
@@ -81,7 +62,7 @@
                 </div>
             </div>
             <div class="movie-card">
-                <img src="assets/capa 3.jpg" alt="Um Ladrão no Telhado">
+                <a href="movie.php?id=3"><img src="assets/capa 3.jpg" alt="Um Ladrão no Telhado"></a>
                 <div class="movie-info">
                     <h3>UM LADRÃO NO TELHADO</h3>
                     <p class="genre">Animação</p>
@@ -89,7 +70,7 @@
                 </div>
             </div>
             <div class="movie-card">
-                <img src="assets/capa 4.jpg" alt="Partir Um Dia">
+                <a href="movie.php?id=4"><img src="assets/capa 4.jpg" alt="Partir Um Dia"></a>
                 <div class="movie-info">
                     <h3>PARTIR, UM DIA</h3>
                     <p class="genre">Animação</p>
@@ -97,7 +78,7 @@
                 </div>
             </div>
             <div class="movie-card">
-                <img src="assets/capa 5.jpg" alt="Snow Princesa">
+                <a href="movie.php?id=5"><img src="assets/capa 5.jpg" alt="Snow Princesa"></a>
                 <div class="movie-info">
                     <h3>SNOW PRINCESA</h3>
                     <p class="genre">Animação</p>
@@ -105,7 +86,7 @@
                 </div>
             </div>
             <div class="movie-card">
-                <img src="assets/capa 6.jpg" alt="O Telefone Negro 2">
+                <a href="movie.php?id=6"><img src="assets/capa 6.jpg" alt="O Telefone Negro 2"></a>
                 <div class="movie-info">
                     <h3>O TELEFONE NEGRO 2</h3>
                     <p class="genre">Animação</p>
@@ -113,7 +94,7 @@
                 </div>
             </div>
             <div class="movie-card">
-                <img src="assets/capa 7.jpg" alt="Kantara">
+                <a href="movie.php?id=7"><img src="assets/capa 7.jpg" alt="Kantara"></a>
                 <div class="movie-info">
                     <h3>KANTARA</h3>
                     <p class="genre">Animação</p>
@@ -121,7 +102,7 @@
                 </div>
             </div>
             <div class="movie-card">
-                <img src="assets/capa 8.jpg" alt="Mr. Burton">
+                <a href="movie.php?id=8"><img src="assets/capa 8.jpg" alt="Mr. Burton"></a>
                 <div class="movie-info">
                     <h3>MR. BURTON</h3>
                     <p class="genre">Animação</p>
@@ -129,7 +110,7 @@
                 </div>
             </div>
             <div class="movie-card hidden">
-                <img src="assets/capa 9.jpg" alt="Filme Extra 1">
+                <a href="movie.php?id=9"><img src="assets/capa 9.jpg" alt="Filme Extra 1"></a>
                 <div class="movie-info">
                     <h3>FILME EXTRA 1</h3>
                     <p class="genre">Animação</p>
@@ -137,7 +118,7 @@
                 </div>
             </div>
             <div class="movie-card hidden">
-                <img src="assets/capa 10.jpg" alt="Filme Extra 2">
+                <a href="movie.php?id=10"><img src="assets/capa 10.jpg" alt="Filme Extra 2"></a>
                 <div class="movie-info">
                     <h3>FILME EXTRA 2</h3>
                     <p class="genre">Animação</p>
@@ -145,7 +126,7 @@
                 </div>
             </div>
             <div class="movie-card hidden">
-                <img src="assets/capa 12.jpg" alt="Filme Extra 3">
+                <a href="movie.php?id=11"><img src="assets/capa 12.jpg" alt="Filme Extra 3"></a>
                 <div class="movie-info">
                     <h3>FILME EXTRA 3</h3>
                     <p class="genre">Animação</p>
@@ -153,7 +134,7 @@
                 </div>
             </div>
             <div class="movie-card hidden">
-                <img src="assets/capa 13.jpg" alt="Filme Extra 4">
+                <a href="movie.php?id=12"><img src="assets/capa 13.jpg" alt="Filme Extra 4"></a>
                 <div class="movie-info">
                     <h3>FILME EXTRA 4</h3>
                     <p class="genre">Animação</p>
@@ -193,26 +174,7 @@
             <p>Pack Total - Pipocas Pequena, Bebida 50cl, Bilhete</p>
         </div>
     </section>
-    <footer>
-        <div class="footer-links">
-            <div>
-                <h4>Serviços Exclusivos</h4>
-                <ul>
-                    <li>Festas Aniversário</li>
-                </ul>
-            </div>
-            <div>
-                <h4>Cinema City</h4>
-                <ul>
-                    <li>Contactos</li>
-                    <li>Normas Cinema City</li>
-                    <li>Parcerias</li>
-                    <li>Publicidade</li>
-                    <li>Trabalhe connosco</li>
-                </ul>
-            </div>
-        </div>
-    </footer>
+    <?php include 'footer.php'; ?>
     <script>
         // Tabs functionality
         document.querySelectorAll('.category-tab').forEach(tab => {
@@ -231,6 +193,34 @@
             });
             this.style.display = 'none';
         });
+        
+        // Hero carousel: cycles background images and updates dots
+        (function(){
+            const images = [
+                'assets/FUNDO.jpg',
+                'assets/banner.jpg',
+                'assets/promo.jpg',
+                'assets/promo2.jpg',
+                'assets/capa1.jpg'
+            ];
+            const hero = document.getElementById('hero');
+            const dots = document.querySelectorAll('.carousel-dots span');
+            let current = 0;
+            function setSlide(i){
+                current = (i + images.length) % images.length;
+                hero.style.backgroundImage = "url('" + images[current] + "')";
+                dots.forEach((d, idx) => d.classList.toggle('active', idx === current));
+            }
+            dots.forEach(d => d.addEventListener('click', function(){
+                const idx = parseInt(this.getAttribute('data-index'));
+                setSlide(idx);
+                resetTimer();
+            }));
+            let timer = setInterval(()=> setSlide(current+1), 5000);
+            function resetTimer(){ clearInterval(timer); timer = setInterval(()=> setSlide(current+1), 5000); }
+            // init
+            setSlide(0);
+        })();
     </script>
 </body>
 </html>
