@@ -7,21 +7,8 @@
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="logo"><img src="assets/images/logo.png" alt="Cinema City Logo"></div>
-            <ul class="nav-links">
-                <li><a href="#">Produtos</a></li>
-                <li><a href="#">Serviços</a></li>
-                <li><a href="#">Cinemas</a></li>
-                <li><a href="#">Destaques</a></li>
-            </ul>
-            <div class="search-login">
-                <input type="text" placeholder="Pesquise por filme, actores, realizadores">
-                <a class="login-btn" href="#">Login</a>
-            </div>
-        </nav>
-    </header>
+        <div id="site-header"></div>
+        <script src="assets/js/include-header.js"></script>
 
     <section id="hero" class="hero">
         <div class="hero-content">
@@ -62,7 +49,7 @@
     <section class="movie-list">
         <div class="movies">
             <div class="movie-card">
-                <a href="movie.html"><img src="assets/images/capa1.jpg" alt="Depois da Caçaça"></a>
+                <a href="movie.html"><img src="assets/images/gallery/capa1.jpg" alt="Depois da Caçaça"></a>
                 <div class="movie-info">
                     <h3>DEPOIS DA CAÇAÇA</h3>
                     <p class="genre">Animação</p>
@@ -70,7 +57,7 @@
                 </div>
             </div>
             <div class="movie-card">
-                <a href="movie.html"><img src="assets/images/capa 2.jpg" alt="Gato Fantasma Anzu"></a>
+                <a href="movie.html"><img src="assets/images/gallery/capa 2.jpg" alt="Gato Fantasma Anzu"></a>
                 <div class="movie-info">
                     <h3>GATO FANTASMA ANZU</h3>
                     <p class="genre">Animação</p>
@@ -78,7 +65,7 @@
                 </div>
             </div>
             <div class="movie-card">
-                <a href="movie.html"><img src="assets/images/capa 3.jpg" alt="Um Ladrão no Telhado"></a>
+                <a href="movie.html"><img src="assets/images/gallery/capa 3.jpg" alt="Um Ladrão no Telhado"></a>
                 <div class="movie-info">
                     <h3>UM LADRÃO NO TELHADO</h3>
                     <p class="genre">Animação</p>
@@ -86,7 +73,7 @@
                 </div>
             </div>
             <div class="movie-card">
-                <a href="movie.html"><img src="assets/images/capa 4.jpg" alt="Partir Um Dia"></a>
+                <a href="movie.html"><img src="assets/images/gallery/capa 4.jpg" alt="Partir Um Dia"></a>
                 <div class="movie-info">
                     <h3>PARTIR, UM DIA</h3>
                     <p class="genre">Animação</p>
@@ -94,7 +81,7 @@
                 </div>
             </div>
             <div class="movie-card">
-                <a href="movie.html"><img src="assets/images/capa 5.jpg" alt="Snow Princesa"></a>
+                <a href="movie.html"><img src="assets/images/gallery/capa 5.jpg" alt="Snow Princesa"></a>
                 <div class="movie-info">
                     <h3>SNOW PRINCESA</h3>
                     <p class="genre">Animação</p>
@@ -102,7 +89,7 @@
                 </div>
             </div>
             <div class="movie-card">
-                <a href="movie.html"><img src="assets/images/capa 6.jpg" alt="O Telefone Negro 2"></a>
+                <a href="movie.html"><img src="assets/images/gallery/capa 6.jpg" alt="O Telefone Negro 2"></a>
                 <div class="movie-info">
                     <h3>O TELEFONE NEGRO 2</h3>
                     <p class="genre">Animação</p>
@@ -117,31 +104,31 @@
         <h2>FILMES MAIS VISTOS :</h2>
         <div class="top-movies">
             <div class="movie-card" data-rank="1">
-                <img src="assets/images/capa 9.jpg" alt="The Conjuring 4">
+                <img src="assets/images/gallery/capa 9.jpg" alt="The Conjuring 4">
                 <div class="rank-number">1</div>
             </div>
             <div class="movie-card" data-rank="2">
-                <img src="assets/images/capa 10.jpg" alt="Abril">
+                <img src="assets/images/gallery/capa 10.jpg" alt="Abril">
                 <div class="rank-number">2</div>
             </div>
             <div class="movie-card" data-rank="3">
-                <img src="assets/images/capa 12.jpg" alt="Jolly LLB 3">
+                <img src="assets/images/gallery/capa 12.jpg" alt="Jolly LLB 3">
                 <div class="rank-number">3</div>
             </div>
         </div>
     </section>
 
     <section class="vip-pack">
-        <img src="assets/images/banner.jpg" alt="VIP Pack" class="vip-banner">
+        <img src="assets/images/gallery/banner.jpg" alt="VIP Pack" class="vip-banner">
     </section>
 
     <section class="promo-packs">
         <div class="pack">
-            <img src="assets/images/promo.jpg" alt="Pack Quartas">
+            <img src="assets/images/gallery/promo.jpg" alt="Pack Quartas">
             <p>Pack Quartas - Pipoca Pequena, Bebida Média, Bilhete Cinema</p>
         </div>
         <div class="pack">
-            <img src="assets/images/promo2.jpg" alt="Pack Total">
+            <img src="assets/images/gallery/promo2.jpg" alt="Pack Total">
             <p>Pack Total - Pipocas Pequena, Bebida 50cl, Bilhete</p>
         </div>
     </section>
@@ -188,11 +175,11 @@
         // Hero carousel: cycles background images and updates dots
         (function(){
             const images = [
-                'assets/FUNDO.jpg',
-                'assets/banner.jpg',
-                'assets/promo.jpg',
-                'assets/promo2.jpg',
-                'assets/capa1.jpg'
+                'assets/images/gallery/FUNDO.jpg',
+                'assets/images/gallery/banner.jpg',
+                'assets/images/gallery/promo.jpg',
+                'assets/images/gallery/promo2.jpg',
+                'assets/images/gallery/capa1.jpg'
             ];
             const hero = document.getElementById('hero');
             const dots = document.querySelectorAll('.carousel-dots span');

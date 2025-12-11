@@ -26,38 +26,14 @@
     
   </head>
 <body>
-    <header class="header">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="https://acspt.github.io/Mustache-website/index.html">Arlindo Santos</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="https://acspt.github.io/Mustache-website/index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://acspt.github.io/Mustache-website/projects.html">Projects</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://acspt.github.io/Mustache-website/about/index.html">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="gallery.html">Gallery</a>
-            </li>
-       
-       <li class="nav-item">
-              <a class="nav-link" href="https://acspt.github.io/Mustache-website/products.html">Products</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://acspt.github.io/Mustache-website/clients/insert.html">Clients</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-            </li>
-          </ul>
+    <div id="site-header"></div>
+    <script>
+    (function(){
+      const paths=['templates/partials/header.html','../templates/partials/header.html','../../templates/partials/header.html','../../../templates/partials/header.html'];
+      function tryLoad(i){ if(i>=paths.length) return console.error('Header fragment not found'); fetch(paths[i]).then(r=>{ if(r.ok) return r.text(); throw new Error(); }).then(html=>{ document.getElementById('site-header').innerHTML=html; }).catch(()=>tryLoad(i+1)); }
+      tryLoad(0);
+    })();
+    </script>
         
         </div>
       </div>
