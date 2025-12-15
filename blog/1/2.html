@@ -2,14 +2,21 @@
 <html lang="en">
 <head>
   <title>Default Title</title>
-  <div id="site-header"></div>
-  <script>
-  (function(){
-    const paths=['templates/partials/header.html','../templates/partials/header.html','../../templates/partials/header.html','../../../templates/partials/header.html'];
-    function tryLoad(i){ if(i>=paths.length) return console.error('Header fragment not found'); fetch(paths[i]).then(r=>{ if(r.ok) return r.text(); throw new Error(); }).then(html=>{ document.getElementById('site-header').innerHTML=html; }).catch(()=>tryLoad(i+1)); }
-    tryLoad(0);
-  })();
-  </script>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    header, main, footer { border: 1px solid #ccc; padding: 10px; margin-bottom: 10px; }
+  </style>
+</head>
+<body>
+  <!-- Block 1: Header (can be overridden) -->
+  <header>
+    
+    Default Header Content
+    
+  </header>
+
+  <!-- Block 2: Main (can be overridden) -->
+  <main>
    
     
 <section class="page-header">
