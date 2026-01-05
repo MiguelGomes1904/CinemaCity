@@ -1,0 +1,52 @@
+{
+  "title": "Produtos",
+  "styles": ["/assets/css/products.css"],
+  "hero": {
+    "background": "#00a5a5",
+    "kicker": "Pack Total",
+    "title": "Pipocas + Bebida 50cl + Bilhete",
+    "subtitle": "Pipoca pequena, bebida 50cl e bilhete no mesmo pack.",
+    "image": "/assets/images/gallery/promo2.jpg",
+    "imageAlt": "Pack Total",
+    "price": "11,50€",
+    "cta": {
+      "label": "Comprar artigos de bar",
+      "href": "#food"
+    }
+  },
+  "intro": {
+    "title": "O primeiro passo para ver um bom filme? Pipocas, claro!",
+    "body": "Menus, pipocas, bebidas e muito mais.",
+    "cta": {
+      "label": "Comprar artigos de bar",
+      "href": "#food"
+    }
+  },
+  "foodStrip": [
+    { "image": "/assets/images/gallery/promo.jpg", "alt": "VIP", "background": "#0b223b" },
+    { "image": "/assets/images/gallery/banner.jpg", "alt": "Hot dog", "background": "#0b223b" },
+    { "image": "/assets/images/gallery/promo2.jpg", "alt": "Pizza", "background": "#0b223b" }
+  ],
+  "banners": [
+    {
+      "background": "#f6a821",
+      "kicker": "Pack Quartas",
+      "title": "Pack Quartas",
+      "subtitle": "Pipoca pequena, bebida média, bilhete cinema",
+      "price": "10,50€",
+      "image": "/assets/images/gallery/banner.jpg"
+    },
+    {
+      "background": "#00a5a5",
+      "kicker": "Pack Total",
+      "title": "Pack Total",
+      "subtitle": "Pipocas pequena + bebida 50cl + bilhete",
+      "price": "11,50€",
+      "image": "/assets/images/gallery/promo2.jpg"
+    }
+  ],
+  "miniFooter": {
+    "label": "Trabalhe connosco",
+    "href": "#"
+  }
+}

@@ -24,14 +24,17 @@
           <nav class="navbar">
             <div class="logo"><img src="assets/images/gallery/logo.png" alt="Cinema City Logo"></div>
             <ul class="nav-links">
-              <li><a href="index.html">Produtos</a></li>
-              <li><a href="products.html">Serviços</a></li>
-              <li><a href="projects.html">Cinemas</a></li>
-              <li><a href="index.html#destaques">Destaques</a></li>
+              <li><a href="/CinemaCity/index.html">Home</a></li>
+              <li><a href="/CinemaCity/cinemas.html">Cinemas</a></li>
+              <li><a href="/CinemaCity/products.html">Products</a></li>
+              <li><a href="/CinemaCity/services.html">Serviços</a></li>
+              <li><a href="/CinemaCity/index.html#destaques">Destaques</a></li>
             </ul>
             <div class="search-login">
               <input type="text" placeholder="Pesquise por filme, actores, realizadores">
-              <a class="login-btn" href="login.html">Login</a>
+              <a class="login-btn" href="/CinemaCity/login.html" title="Login">
+                <img src="assets/images/gallery/login-icon.svg" alt="Login" class="login-icon">
+              </a>
             </div>
           </nav>
         </header>
@@ -51,3 +54,4 @@
     tryLoad(0);
   }
 })();
+

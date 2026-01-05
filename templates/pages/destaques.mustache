@@ -1,0 +1,107 @@
+{{<layout}}
+{{$main}}
+<!-- Hero Section -->
+<section class="destaques-hero">
+    <div class="hero-image-container">
+        <img src="{{heroImage}}" alt="{{heroAlt}}" class="hero-image">
+        <div class="hero-overlay"></div>
+    </div>
+</section>
+
+<!-- Destaques Section -->
+<section class="destaques-section">
+    <div class="container">
+        <h1 class="destaques-title">Destaques</h1>
+        
+        <div class="destaques-grid">
+            {{#highlights}}
+            <div class="destaque-card" data-id="{{id}}" style="background-color: {{bgColor}}; color: {{textColor}}">
+                <div class="card-content">
+                    {{#icon}}
+                    <div class="card-icon {{icon}}"></div>
+                    {{/icon}}
+                    
+                    {{#subtitle}}
+                    <div class="card-subtitle">{{subtitle}}</div>
+                    {{/subtitle}}
+                    
+                    <h3 class="card-title">{{title}}</h3>
+                    
+                    {{#discount}}
+                    <div class="card-discount">
+                        <span class="discount-value">{{discount}}</span>
+                        <span class="discount-text">DE DESCONTO</span>
+                    </div>
+                    {{/discount}}
+                    
+                    <p class="card-description">{{description}}</p>
+                    
+                    <button class="card-btn">Saber mais</button>
+                </div>
+                <div class="card-image">
+                    <img src="{{image}}" alt="{{title}}">
+                </div>
+            </div>
+            {{/highlights}}
+        </div>
+    </div>
+</section>
+
+<!-- Food Section -->
+<section class="food-section">
+    <div class="food-gallery">
+        {{#foodSection.items}}
+        <div class="food-item">
+            <img src="{{image}}" alt="{{alt}}">
+        </div>
+        {{/foodSection.items}}
+    </div>
+</section>
+
+<!-- Promo Banners -->
+<section class="promo-banners">
+    <div class="container">
+        <div class="banners-grid">
+            {{#promos}}
+            <div class="promo-banner" style="background-color: {{bgColor}}">
+                <div class="banner-content">
+                    <h3 class="banner-title">{{title}}</h3>
+                    <p class="banner-subtitle">{{subtitle}}</p>
+                    {{#price}}
+                    <div class="banner-price">{{price}}</div>
+                    {{/price}}
+                </div>
+                <div class="banner-image">
+                    <img src="{{image}}" alt="{{title}}">
+                </div>
+            </div>
+            {{/promos}}
+        </div>
+    </div>
+</section>
+
+<!-- Footer Info Links -->
+<section class="footer-info-section">
+    <div class="container">
+        <div class="footer-info-grid">
+            <div class="footer-info-col">
+                <h4>{{footerLinks.servicos.title}}</h4>
+                <ul>
+                    {{#footerLinks.servicos.links}}
+                    <li><a href="{{url}}">{{text}}</a></li>
+                    {{/footerLinks.servicos.links}}
+                </ul>
+            </div>
+            <div class="footer-info-col">
+                <h4>{{footerLinks.cinema.title}}</h4>
+                <ul>
+                    {{#footerLinks.cinema.links}}
+                    <li><a href="{{url}}">{{text}}</a></li>
+                    {{/footerLinks.cinema.links}}
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+{{/main}}
+{{/layout}}

@@ -26,6 +26,21 @@
     
   </head>
 <body>
+<<<<<<< HEAD
+    <div id="site-header"></div>
+
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h2>Colin Farrell &amp; Margot Robbie</h2>
+            <h1>Uma Grande, Corajosa e Bela Viagem</h1>
+            <p>Exclusivo em cinemas<br>18 de Setembro</p>
+            <div class="carousel-dots">
+                <span data-index="0" class="active"></span>
+                <span data-index="1"></span>
+                <span data-index="2"></span>
+                <span data-index="3"></span>
+                <span data-index="4"></span>
+=======
     <header class="header">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
@@ -75,6 +90,7 @@
             <div class="hero-buttons">
                 <a href="http://localhost/cinemacity/projects.html" class="btn btn-primary">View My Work</a>
                 <a href="http://localhost/cinemacity/contact.html" class="btn btn-secondary">Get In Touch</a>
+>>>>>>> 0f2ad379a3948c5867496d1f47704054852881dc
             </div>
         </div>
         <div class="hero-image">
@@ -158,6 +174,57 @@
             <p>&copy; 2025 Portfolio. All rights reserved.</p>
         </div>
     </footer>
+<<<<<<< HEAD
+
+    <script>
+        // Tabs functionality
+        document.querySelectorAll('.category-tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                document.querySelectorAll('.category-tab').forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        // Show more movies
+        document.getElementById('show-more-btn').addEventListener('click', function() {
+            const hiddenMovies = document.querySelectorAll('.movie-card.hidden');
+            hiddenMovies.forEach(movie => {
+                movie.classList.remove('hidden');
+            });
+            this.style.display = 'none';
+        });
+
+        // Hero carousel: cycles background images and updates dots
+        (function(){
+            const images = [
+                'assets/images/gallery/FUNDO.jpg',
+                'assets/images/gallery/banner.jpg',
+                'assets/images/gallery/promo.jpg',
+                'assets/images/gallery/promo2.jpg',
+                'assets/images/gallery/capa1.jpg'
+            ];
+            const hero = document.getElementById('hero');
+            const dots = document.querySelectorAll('.carousel-dots span');
+            let current = 0;
+            function setSlide(i){
+                current = (i + images.length) % images.length;
+                hero.style.backgroundImage = "url('" + images[current] + "')";
+                dots.forEach((d, idx) => d.classList.toggle('active', idx === current));
+            }
+            dots.forEach(d => d.addEventListener('click', function(){
+                const idx = parseInt(this.getAttribute('data-index'));
+                setSlide(idx);
+                resetTimer();
+            }));
+            let timer = setInterval(()=> setSlide(current+1), 5000);
+            function resetTimer(){ clearInterval(timer); timer = setInterval(()=> setSlide(current+1), 5000); }
+            // init
+            setSlide(0);
+        })();
+    </script>
+    <script src="assets/js/include-header.js"></script>
+</body>
+=======
     <!-- Bootstrap JS Bundle -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
@@ -166,4 +233,5 @@
        
       
    </body>
+>>>>>>> 0f2ad379a3948c5867496d1f47704054852881dc
 </html>

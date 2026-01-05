@@ -1,0 +1,122 @@
+{
+  "title": "Destaques - Cinema City",
+  "description": "Confira as melhores promoções e experiências do Cinema City",
+  "pageTitle": "Destaques",
+  "heroImage": "assets/images/cinema-interior.jpg",
+  "heroAlt": "Interior do Cinema City",
+  "highlights": [
+    {
+      "id": "big-duplo",
+      "title": "BIG DUPLO 2025",
+      "subtitle": "REGRESSO ÀS AULAS",
+      "description": "Com o regresso às aulas bate-te! ... Já nem tudo é possível, mas o regresso às aulas do Stadium é bem-vinda! Não deixes que um novo trimestre interfira no teu amor pela cultura. É como se nunca tivesses ido embora, vai começar a dar estrelas em dia.",
+      "image": "assets/images/promo-big-duplo.jpg",
+      "bgColor": "#2c5f4f",
+      "icon": "popcorn"
+    },
+    {
+      "id": "vip",
+      "title": "VIP CINEMA CITY",
+      "description": "Uma experiência inesquecível! Relaxa em poltronas super além da tela de cinema. Os filmes não são ações Visuais - e os momentos Conforto também não!",
+      "image": "assets/images/vip-seats.jpg",
+      "bgColor": "#1a3347",
+      "icon": "vip"
+    },
+    {
+      "id": "lidl",
+      "title": "LIDL PLUS",
+      "subtitle": "Ganhe descontos no Cinema City",
+      "description": "Viu poupar no filme. A ver os trailers? Cinema City parceiro da Lidl, para que suas visitas ao filme de sua família tenham grande qualidade garantida.",
+      "discount": "40%",
+      "image": "assets/images/lidl-promo.jpg",
+      "bgColor": "#ffc107",
+      "textColor": "#003d7a"
+    },
+    {
+      "id": "terror",
+      "title": "DUPLO TERROR HALLOWEEN",
+      "subtitle": "13€",
+      "description": "O Halloween está a chegar ao Cinema City... com Duplo Terror! Para um Halloween em grande, é tudo filme de assustar e tá tudo cheio, leve-te a sentir mais além que de costume!",
+      "image": "assets/images/halloween-promo.jpg",
+      "bgColor": "#ff6b35",
+      "icon": "skull"
+    },
+    {
+      "id": "merchandise",
+      "title": "MERCHANDISE",
+      "description": "Pois é, que até vendemos! R da cultura pop, Cinema uma casa do Pepsi que não tens iguais pra oferecer!",
+      "image": "assets/images/merchandise.jpg",
+      "bgColor": "#1a1a2e",
+      "textColor": "#ffffff"
+    },
+    {
+      "id": "pack-anime",
+      "title": "PACK QUARTAS",
+      "description": "No Cinema City, as quartas-feiras são a pensar em ti. Se tens até 25 anos, inclusive, não podes perder este Pack",
+      "image": "assets/images/pack-anime.jpg",
+      "bgColor": "#dc143c",
+      "textColor": "#ffffff"
+    }
+  ],
+  "foodSection": {
+    "title": "Snacks & Bebidas",
+    "items": [
+      {
+        "image": "assets/images/vip-badge.png",
+        "alt": "VIP"
+      },
+      {
+        "image": "assets/images/hotdog.png",
+        "alt": "Hot Dog"
+      },
+      {
+        "image": "assets/images/nachos.png",
+        "alt": "Nachos"
+      },
+      {
+        "image": "assets/images/pizza.png",
+        "alt": "Pizza"
+      },
+      {
+        "image": "assets/images/popcorn-badge.png",
+        "alt": "Popcorn"
+      }
+    ]
+  },
+  "promos": [
+    {
+      "id": "pack-quartas-banner",
+      "title": "PACK QUARTAS",
+      "subtitle": "PIPOCA PEQUENA, BEBIDA MÉDIA, BILHETE CINEMA",
+      "price": "13,50€",
+      "image": "assets/images/pack-quartas-banner.jpg",
+      "bgColor": "#4ecdc4"
+    },
+    {
+      "id": "pack-total",
+      "title": "Pack Total",
+      "subtitle": "PIPOCA PEQUENA, BEBIDA 50CL + BILHETE",
+      "price": "11,50€",
+      "image": "assets/images/pack-total-banner.jpg",
+      "bgColor": "#1a3347"
+    }
+  ],
+  "footerLinks": {
+    "servicos": {
+      "title": "Serviços Exclusivos",
+      "links": [
+        { "text": "Festas Aniversário", "url": "#" }
+      ]
+    },
+    "cinema": {
+      "title": "Cinema City",
+      "links": [
+        { "text": "Contactos", "url": "contact.html" },
+        { "text": "Normas Cinema City", "url": "#" },
+        { "text": "Parcerias", "url": "#" },
+        { "text": "Publicidade", "url": "#" },
+        { "text": "Trabalhe conosco", "url": "#" }
+      ]
+    }
+  }
+}

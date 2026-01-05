@@ -13,9 +13,9 @@ $(document).ready(function () {
         success: function (data) {
             console.log(data);
             // Fetch the Mustache template
-            $.get(basePath + '/assets/templates/gallery.mustache', function (template) {
+            $.get(basePath + '/assets/templates/gallery.cinemacity', function (template) {
                 // Render the template with the data
-                const rendered = Mustache.render(template, data);
+                const rendered = CinemaCity.render(template, data);
                 // Insert the rendered HTML into the page
                 $('#slider').html(rendered);
                 totalSlides = data.images.length;
@@ -48,3 +48,4 @@ $(document).ready(function () {
 
 
 });
+

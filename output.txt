@@ -1,0 +1,36 @@
+﻿{
+  templates: 'templates/pages',
+  layouts: 'templates/layouts',
+  partials: 'templates/partials',
+  data: 'templates/data',
+  createDirectories: true
+}
+Ô£ô Settings loaded successfully
+Debug: settings object: {
+  templates: 'templates/pages',
+  layouts: 'templates/layouts',
+  partials: 'templates/partials',
+  data: 'templates/data',
+  createDirectories: true
+}
+Debug: templatesDir: C:\xampp\htdocs\CinemaCity\templates\pages
+Debug: partialsDir: C:\xampp\htdocs\CinemaCity\templates\partials
+Debug: layoutsDir: C:\xampp\htdocs\CinemaCity\templates\layouts
+Debug: outputBasePath: C:\xampp\htdocs\CinemaCity
+­ƒÜÇ Starting Mustache compilation...
+
+Ô£ô Global data loaded successfully
+Ô£ô Loaded 0 partials
+
+­ƒôé Scanning templates directory...
+­ƒöì Scanning templates directory: C:\xampp\htdocs\CinemaCity\templates\pages
+C:\xampp\htdocs\CinemaCity\templates\pages
+C:\xampp\htdocs\CinemaCity\templates\pages\about
+C:\xampp\htdocs\CinemaCity\templates\pages\blog
+C:\xampp\htdocs\CinemaCity\templates\pages\blog\1
+C:\xampp\htdocs\CinemaCity\templates\pages\blog\2025
+C:\xampp\htdocs\CinemaCity\templates\pages\blog\2025\articles
+C:\xampp\htdocs\CinemaCity\templates\pages\clients
+C:\xampp\htdocs\CinemaCity\templates\pages\products
+Ô£ô Found 0 templates
+Ô£ô Found 0 template(s)

@@ -271,44 +271,271 @@ footer {
 
 /* RESPONSIVE */
 @media (max-width: 1024px) {
+  .hero-cinemas {
+    padding: 60px 40px;
+    min-height: 300px;
+  }
+  
+  .hero-cinemas h1 {
+    font-size: 36px;
+  }
+  
   .cinema-cards-grid {
     grid-template-columns: repeat(3, 1fr);
+    padding: 0 30px;
   }
 
   .adira-grid {
     grid-template-columns: 1fr;
     gap: 40px;
+    padding: 0 30px;
+  }
+  
+  .adira-left {
+    text-align: center;
   }
 
   .packs-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 30px;
+  }
+  
+  .vip-content {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 768px) {
   .hero-cinemas {
     padding: 40px 20px;
+    min-height: 250px;
   }
 
   .hero-cinemas h1 {
-    font-size: 32px;
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+  
+  .hero-cinemas p {
+    font-size: 0.9rem;
   }
 
   .cinema-cards-grid {
     grid-template-columns: repeat(2, 1fr);
     padding: 0 20px;
+    gap: 15px;
+  }
+  
+  .cinema-card {
+    height: 220px;
   }
 
   .cinemas-section h2 {
     font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+  
+  .cinemas-section {
+    padding: 40px 0;
   }
 
+  .adira-section {
+    padding: 40px 20px;
+  }
+  
+  .adira-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .adira-left h3 {
+    font-size: 1.4rem;
+  }
+  
+  .adira-item {
+    gap: 12px;
+  }
+  
+  .adira-icon {
+    font-size: 1.8rem;
+  }
+  
+  .adira-item p {
+    font-size: 0.95rem;
+  }
+
+  .mais-cinema {
+    padding: 40px 20px;
+  }
+  
+  .mais-cinema h2 {
+    font-size: 1.6rem;
+  }
+  
+  .mais-cinema p {
+    font-size: 0.9rem;
+  }
+
+  .vip-section {
+    padding: 30px 20px;
+  }
+  
   .vip-content {
     grid-template-columns: repeat(2, 1fr);
-    padding: 0 20px;
+    gap: 20px;
+  }
+  
+  .vip-badge, .food-item {
+    height: 180px;
   }
 
+  .packs-section {
+    padding: 40px 20px;
+  }
+  
+  .packs-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .pack {
+    border-radius: 8px;
+  }
+
+  footer {
+    padding: 30px 20px;
+  }
+  
   .footer-content {
     grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-cinemas {
+    padding: 30px 15px;
+    min-height: 200px;
+  }
+
+  .hero-cinemas h1 {
+    font-size: 22px;
+    margin-bottom: 12px;
+  }
+  
+  .hero-cinemas p {
+    font-size: 0.85rem;
+  }
+  
+  .hero-content-cinemas {
+    max-width: 100%;
+  }
+
+  .cinema-cards-grid {
+    grid-template-columns: 1fr;
+    padding: 0 15px;
+    gap: 12px;
+  }
+  
+  .cinema-card {
+    height: 180px;
+  }
+
+  .cinemas-section h2 {
+    font-size: 1.4rem;
+    margin-bottom: 25px;
+  }
+  
+  .cinemas-section {
+    padding: 30px 0;
+  }
+
+  .adira-section {
+    padding: 30px 15px;
+  }
+  
+  .adira-grid {
+    gap: 20px;
+  }
+  
+  .adira-left h3 {
+    font-size: 1.2rem;
+  }
+  
+  .adira-item {
+    gap: 10px;
+  }
+  
+  .adira-icon {
+    font-size: 1.5rem;
+  }
+  
+  .adira-item p {
+    font-size: 0.9rem;
+  }
+
+  .mais-cinema {
+    padding: 30px 15px;
+  }
+  
+  .mais-cinema h2 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+  }
+  
+  .mais-cinema p {
+    font-size: 0.85rem;
+  }
+  
+  .btn-tabela {
+    padding: 12px 24px;
+    font-size: 0.9rem;
+  }
+
+  .vip-section {
+    padding: 20px 15px;
+  }
+  
+  .vip-content {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .vip-badge, .food-item {
+    height: 150px;
+  }
+
+  .packs-section {
+    padding: 30px 15px;
+  }
+  
+  .packs-grid {
+    gap: 15px;
+  }
+  
+  .pack-info {
+    padding: 15px 12px;
+  }
+  
+  .pack-info h4 {
+    font-size: 0.9rem;
+  }
+  
+  .pack-info p {
+    font-size: 0.85rem;
+  }
+
+  footer {
+    padding: 20px 15px;
+  }
+  
+  .footer-col h4 {
+    font-size: 0.9em;
+    margin-bottom: 8px;
+  }
+  
+  .footer-col p {
+    font-size: 0.8rem;
+    margin-bottom: 6px;
   }
 }

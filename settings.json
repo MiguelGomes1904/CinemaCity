@@ -1,6 +1,11 @@
 {
+<<<<<<< HEAD
+  "siteUrl": "file:///C:/xampp/htdocs/CinemaCity/index.html",
+  "cinemacity.compiler": {
+=======
   "siteUrl": "http://localhost/cinemacity/",
   "mustache.compiler": {
+>>>>>>> 0f2ad379a3948c5867496d1f47704054852881dc
     "templates": "templates/pages",
     "layouts": "templates/layouts",
     "partials": "templates/partials",

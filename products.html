@@ -3,22 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-        <meta name="description" content="">
-        <meta name="keywords" content="">
-        <meta name="author" content="">
+    <title>Produtos</title>
+        <meta name="description" content="Produtos Cinema City">
+        <meta name="keywords" content="cinema, pipocas, menus">
+        <meta name="author" content="Cinema City">
         <meta name="robots" content="">
         <link rel="canonical" href="">
-        <meta property="og:title" content="">
-        <meta property="og:description" content="">
+        <meta property="og:title" content="Produtos">
+        <meta property="og:description" content="Menus, pipocas e packs Cinema City">
         <meta property="og:image" content="">
         <meta property="og:url" content="">
-        <meta property="og:type" content="">
-        <meta name="twitter:card" content="">
-        <meta name="twitter:title" content="">
-        <meta name="twitter:description" content="">
+        <meta property="og:type" content="website">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Produtos">
+        <meta name="twitter:description" content="Menus, pipocas e packs Cinema City">
         <meta name="twitter:image" content="">
     <!-- Latest compiled and minified CSS -->
+<<<<<<< HEAD
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/products.css">
+  </head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="/CinemaCity/">
+                    <img src="assets/images/gallery/logo.png" alt="Cinema City Logo">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/CinemaCity/">Home</a></li>
+                <li><a href="/CinemaCity/cinemas.html">Cinemas</a></li>
+                <li><a href="/CinemaCity/products.html">Produtos</a></li>
+                <li><a href="/CinemaCity/services.html">Serviços</a></li>
+                <li><a href="/CinemaCity/destaques.html">Destaques</a></li>
+            </ul>
+            <div class="search-login">
+                <input type="text" placeholder="Pesquise por filme, actores, realizadores">
+                <a class="login-btn" href="/CinemaCity/login.html">Login</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+=======
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">    
     <link rel="stylesheet" href="http://localhost/cinemacity/assets/css/styles.css">
     
@@ -68,55 +97,113 @@
     <main>
         
   <p>Ver <a href="http://localhost/cinemacity/products/product1.html">Produto 1</a> baseada em uma sub parent layout</p>
+>>>>>>> 0f2ad379a3948c5867496d1f47704054852881dc
 
+<section class="products-hero">
+    <img src="assets/images/gallery/promo2.jpg" alt="Banner Pack Total" class="hero-banner-img">
+</section>
 
+<section class="products-intro">
+    <div class="products-intro-container">
+        <div class="products-intro-text">
+            <h2>O primeiro passo para ver um bom filme?<br>Pipocas, claro!</h2>
+            <p>Menus, pipocas, bebidas e muito mais</p>
+            <a class="btn btn-primary" href="#food">Comprar artigos de bar</a>
+        </div>
+        <div class="products-intro-image">
+            <img src="assets/images/gallery/promo2.jpg" alt="Pipocas e Bebida Cinema City">
+        </div>
+    </div>
+</section>
 
-    
-        <h1>Get In Touch</h1>
-        <p>Let's discuss your next project or collaboration opportunity</p>
-        
+<section id="food" class="food-strip">
+    <div class="food-strip-inner">
+        <div class="food-card">
+            <img src="assets/images/gallery/promo.jpg" alt="VIP">
+        </div>
+        <div class="food-card">
+            <img src="assets/images/gallery/banner.jpg" alt="Hot dog">
+        </div>
+        <div class="food-card">
+            <img src="assets/images/gallery/promo2.jpg" alt="Nachos">
+        </div>
+        <div class="food-card">
+            <img src="assets/images/gallery/promo.jpg" alt="Pizza">
+        </div>
+        <div class="food-card">
+            <img src="assets/images/gallery/banner.jpg" alt="Nachos">
+        </div>
+    </div>
+</section>
+
+<section class="promo-banners container">
+    <div class="banners-grid">
+        <div class="promo-banner" style="background-color: #f6a821;">
+            <div class="banner-content">
+                <p class="banner-kicker">Pack Quartas</p>
+                <h3 class="banner-title">Pack Quartas</h3>
+                <p class="banner-subtitle">Pipoca pequena, bebida média, bilhete cinema</p>
+                <div class="banner-price">10,50€</div>
+            </div>
+            <div class="banner-image">
+                <img src="assets/images/gallery/banner.jpg" alt="Pack Quartas">
+            </div>
+        </div>
+        <div class="promo-banner" style="background-color: #00a5a5;">
+            <div class="banner-content">
+                <p class="banner-kicker">Pack Total</p>
+                <h3 class="banner-title">Pack Total</h3>
+                <p class="banner-subtitle">Pipocas pequena + bebida 50cl + bilhete</p>
+                <div class="banner-price">11,50€</div>
+            </div>
+            <div class="banner-image">
+                <img src="assets/images/gallery/promo2.jpg" alt="Pack Total">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="products-mini-footer">
+    <a href="#">Trabalhe connosco</a>
+</section>
 
     </main>
     
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-section">
-                <h3>Connect With Me</h3>
-                <div class="social-links">
-                    <a href="#" class="social-link">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="#" class="social-link">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="#" class="social-link">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="#" class="social-link">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="footer-section">
-                <h3>Quick Links</h3>
+                <h3>Cinema City</h3>
                 <ul class="footer-links">
+<<<<<<< HEAD
+                    <li><a href="/CinemaCity/">Home</a></li>
+                    <li><a href="/CinemaCity/cinemas.html">Cinemas</a></li>
+                    <li><a href="/CinemaCity/products.html">Produtos</a></li>
+                    <li><a href="/CinemaCity/contact.html">Contactos</a></li>
+=======
                     <li><a href="http://localhost/cinemacity/index.html">Home</a></li>
                     <li><a href="http://localhost/cinemacity/about/index.html">About</a></li>
                     <li><a href="http://localhost/cinemacity/projects.html">Projectos</a></li>
                     <li><a href="http://localhost/cinemacity/contact.html">Contactos</a></li>
+>>>>>>> 0f2ad379a3948c5867496d1f47704054852881dc
                 </ul>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2025 Portfolio. All rights reserved.</p>
+            <p>&copy; 2025 Cinema City. Todos os direitos reservados.</p>
         </div>
     </footer>
     <!-- Bootstrap JS Bundle -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
+<<<<<<< HEAD
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/4.0.0/mustache.min.js"></script>
+    <script src="assets/js/main.js"></script>
+=======
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/4.0.0/mustache.min.js"></script>
     <script src="http://localhost/cinemacity/assets/js/main.js"></script>
        
       
+>>>>>>> 0f2ad379a3948c5867496d1f47704054852881dc
    </body>
 </html>

@@ -11,10 +11,10 @@ $(document).ready(function () {
         console.log('JSON Data:', data);
 
         // Fetch the Mustache template
-        $.get(basePath + '/assets/templates/gallery.mustache', function (template) {
+        $.get(basePath + '/assets/templates/gallery.cinemacity', function (template) {
             // Render the template with the data
             console.log('TEMPLATE:', template);
-            const rendered = Mustache.render(template, data);
+            const rendered = CinemaCity.render(template, data);
             console.log('RENDERED:', rendered);
 
 
@@ -46,5 +46,6 @@ function showSlides(index) {
 window.plusSlides = function (n) {
     showSlides(slideIndex + n);
 }
+
 
 

@@ -70,10 +70,19 @@
     background: transparent;
     color: #fff;
     border: none;
-    border-radius: 50%;
+    border-radius: 0;
     padding: 8px 12px;
     cursor: pointer;
     font-size: 1.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-icon {
+    width: 24px;
+    height: 24px;
+    display: block;
 }
 .hero {
     background: url('../images/gallery/FUNDO.jpg') center/cover no-repeat;
@@ -410,24 +419,490 @@ footer {
     color: #555;
     font-size: 0.9em;
 }
-@media (max-width: 900px) {
+
+/* GALERIA DE IMAGENS */
+.images-gallery {
+    padding: 60px 30px;
+    background: #f2f4f6;
+    text-align: center;
+}
+
+.images-gallery h2 {
+    font-size: 2em;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: #1a2a4a;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.gallery-item {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-item p {
+    padding: 12px;
+    font-size: 0.9em;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* HIDDEN MOVIES */
+.movie-card.hidden {
+    display: none;
+}
+
+/* RESPONSIVE DESIGN */
+
+/* Tablets e telas médias */
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 12px 15px;
+        gap: 15px;
+    }
+    
+    .logo img {
+        height: 40px;
+    }
+    
+    .nav-links {
+        gap: 15px;
+        padding: 8px 15px;
+    }
+    
+    .nav-links li a {
+        font-size: 0.9em;
+    }
+    
+    .search-login {
+        gap: 10px;
+    }
+    
+    .search-login input {
+        width: 200px;
+        font-size: 0.85em;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.8rem;
+    }
+    
+    .hero-content h2 {
+        font-size: 0.85rem;
+    }
+    
+    .hero-content p {
+        font-size: 0.95rem;
+    }
+    
+    .booking-bar {
+        gap: 8px;
+        flex-wrap: wrap;
+        padding: 15px 10px;
+    }
+    
+    .booking-bar select, .booking-bar button {
+        padding: 8px 12px;
+        font-size: 0.9em;
+    }
+    
+    .categories {
+        padding: 6px 20px;
+    }
+    
     .movies {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .top-movies {
-        flex-direction: column;
+        grid-template-columns: repeat(3, 1fr);
         gap: 20px;
     }
+    
     .footer-links {
-        flex-direction: column;
-        gap: 30px;
+        gap: 50px;
     }
-    .promo-packs {
-        flex-direction: column;
-        gap: 20px;
+}
+
+/* Dispositivos pequenos - Tablets e Smartphones grandes */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 12px;
+        gap: 10px;
+        flex-wrap: wrap;
     }
+    
+    .logo img {
+        height: 35px;
+    }
+    
+    .nav-links {
+        gap: 10px;
+        padding: 6px 12px;
+        font-size: 0.85em;
+        order: 3;
+        width: 100%;
+    }
+    
+    .search-login {
+        gap: 8px;
+        flex: 1;
+        min-width: 200px;
+    }
+    
+    .search-login input {
+        width: 100%;
+        max-width: 150px;
+        padding: 8px 12px;
+        font-size: 0.8em;
+    }
+    
+    .login-btn {
+        padding: 6px 10px;
+        font-size: 1rem;
+    }
+    
+    .hero {
+        min-height: 50vh;
+    }
+    
+    .hero-content {
+        padding: 20px 15px;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+        margin: 6px 0 12px 0;
+    }
+    
+    .hero-content h2 {
+        font-size: 0.8rem;
+        margin-bottom: 6px;
+    }
+    
+    .hero-content p {
+        font-size: 0.9rem;
+        margin-bottom: 12px;
+    }
+    
+    .carousel-dots span {
+        width: 8px;
+        height: 8px;
+        margin: 0 4px;
+    }
+    
+    .carousel-dots span.active {
+        width: 10px;
+        height: 10px;
+    }
+    
+    .booking-bar {
+        gap: 6px;
+        flex-direction: column;
+        padding: 12px 10px;
+    }
+    
+    .booking-bar select, .booking-bar button {
+        width: 100%;
+        padding: 10px 12px;
+        font-size: 0.9em;
+    }
+    
     .categories {
         flex-direction: column;
+        gap: 15px;
+        padding: 6px 15px;
+    }
+    
+    .categories ul {
+        gap: 8px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .cinema-filter {
+        width: 100%;
+    }
+    
+    .movies {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        padding: 30px 15px 40px 15px;
+    }
+    
+    .movie-card {
+        min-height: 280px;
+    }
+    
+    .movie-list {
+        padding: 30px 15px 40px 15px;
+    }
+    
+    .most-viewed {
+        padding: 30px 15px 40px 15px;
+    }
+    
+    .most-viewed h2 {
+        font-size: 1.2em;
+        margin-bottom: 20px;
+    }
+    
+    .top-movies {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .top-movies .movie-card {
+        min-height: 200px;
+    }
+    
+    .top-movies .movie-card::before {
+        left: -18px;
+        font-size: 4rem;
+    }
+    
+    .vip-banner {
+        margin-bottom: 20px;
+    }
+    
+    .promo-packs {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px 10px;
+    }
+    
+    .pack {
+        min-width: 100%;
+    }
+    
+    footer {
+        padding: 30px 15px 20px 15px;
+    }
+    
+    .footer-links {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .footer-links h4 {
+        font-size: 0.95em;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 15px;
+        padding: 40px 15px;
+    }
+    
+    .images-gallery {
+        padding: 40px 15px;
+    }
+    
+    .images-gallery h2 {
+        font-size: 1.5em;
+        margin-bottom: 25px;
+    }
+}
+
+/* Smartphones pequenos */
+@media (max-width: 480px) {
+    .navbar {
+        padding: 8px 10px;
+        gap: 8px;
+    }
+    
+    .logo img {
+        height: 30px;
+    }
+    
+    .nav-links {
+        gap: 6px;
+        padding: 6px 8px;
+        font-size: 0.75em;
+    }
+    
+    .nav-links li a {
+        font-size: 0.8em;
+    }
+    
+    .search-login {
+        gap: 6px;
+        width: 100%;
+        order: 3;
+    }
+    
+    .search-login input {
+        max-width: 120px;
+        padding: 6px 10px;
+        font-size: 0.75em;
+    }
+    
+    .login-btn {
+        padding: 5px 8px;
+        font-size: 0.9rem;
+    }
+    
+    .hero {
+        min-height: 40vh;
+    }
+    
+    .hero-content {
+        padding: 15px 10px;
+    }
+    
+    .hero-content h1 {
+        font-size: 1.4rem;
+        margin: 4px 0 8px 0;
+    }
+    
+    .hero-content h2 {
+        font-size: 0.7rem;
+        margin-bottom: 4px;
+    }
+    
+    .hero-content p {
+        font-size: 0.8rem;
+        margin-bottom: 8px;
+    }
+    
+    .carousel-dots {
+        transform: scale(0.8);
+    }
+    
+    .booking-bar {
+        gap: 6px;
+        padding: 10px 8px;
+    }
+    
+    .booking-bar select, .booking-bar button {
+        padding: 8px 10px;
+        font-size: 0.8em;
+    }
+    
+    .categories {
+        padding: 4px 10px;
         gap: 10px;
+    }
+    
+    .categories ul {
+        gap: 6px;
+    }
+    
+    .category-tab {
+        padding: 8px 12px;
+        font-size: 0.8em;
+    }
+    
+    .cinema-filter {
+        font-size: 0.9em;
+    }
+    
+    .movies {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 20px 10px 30px 10px;
+    }
+    
+    .movie-card {
+        min-height: 240px;
+    }
+    
+    .movie-list {
+        padding: 20px 10px 30px 10px;
+    }
+    
+    .most-viewed {
+        padding: 20px 10px 30px 10px;
+    }
+    
+    .most-viewed h2 {
+        font-size: 1.1em;
+        margin-bottom: 15px;
+    }
+    
+    .top-movies {
+        gap: 10px;
+    }
+    
+    .top-movies .movie-card {
+        min-height: 180px;
+    }
+    
+    .top-movies .movie-card::before {
+        font-size: 2.5rem;
+        left: -12px;
+    }
+    
+    .show-more {
+        padding: 8px 20px;
+        font-size: 0.9em;
+    }
+    
+    .promo-packs {
+        padding: 15px 8px;
+        gap: 12px;
+    }
+    
+    .pack {
+        min-width: auto;
+    }
+    
+    footer {
+        padding: 20px 10px 15px 10px;
+    }
+    
+    .footer-links {
+        gap: 15px;
+    }
+    
+    .footer-links h4 {
+        font-size: 0.9em;
+        margin-bottom: 8px;
+    }
+    
+    .footer-links li {
+        font-size: 0.8em;
+        margin-bottom: 4px;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 10px;
+        padding: 30px 10px;
+    }
+    
+    .gallery-item img {
+        height: 100px;
+    }
+    
+    .images-gallery {
+        padding: 30px 10px;
+    }
+    
+    .images-gallery h2 {
+        font-size: 1.3em;
+        margin-bottom: 20px;
     }
 }
