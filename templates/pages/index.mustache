@@ -1,41 +1,132 @@
 {{<layout}}
 {{$main}}
-<section class="hero">
+<section id="hero" class="hero">
     <div class="hero-content">
-        <div>
-            <h1 class="hero-title">{{hero.title}}</h1>
-            <p class="hero-subtitle">{{hero.subtitle}}</p>
-            <div class="hero-buttons">
-                <a href="./projects.html" class="btn btn-primary">{{hero.buttons.projects}}</a>
-                <a href="./contact.html" class="btn btn-secondary">{{hero.buttons.contact}}</a>
+        <h2>{{hero.actors}}</h2>
+        <h1>{{hero.title}}</h1>
+        <p>{{hero.subtitle}}<br>{{hero.date}}</p>
+        <div class="carousel-dots">
+            {{#hero.carouselDots}}
+            <span data-index="{{index}}" class="{{#active}}active{{/active}}"></span>
+            {{/hero.carouselDots}}
+        </div>
+    </div>
+</section>
+
+<section class="booking-bar">
+    <select><option>Escolha um Cinema</option></select>
+    <select><option>Escolha um Filme</option></select>
+    <select><option>Data</option></select>
+    <select><option>Hora</option></select>
+    <button>Comprar bilhetes</button>
+</section>
+
+<section class="categories">
+    <ul class="category-tabs">
+        {{#categories}}
+        <li class="category-tab {{#active}}active{{/active}}" data-category="{{id}}">{{name}}</li>
+        {{/categories}}
+    </ul>
+    <select class="cinema-filter">
+        <option>Todos os cinemas</option>
+    </select>
+</section>
+
+<section class="movie-list">
+    <div class="movies">
+        {{#movies}}
+        <div class="movie-card">
+            <a href="movie.html"><img src="{{image}}" alt="{{title}}"></a>
+            <div class="movie-info">
+                <h3>{{title}}</h3>
+                <p class="genre">{{genre}}</p>
+                <p class="rating">{{rating}}</p>
             </div>
         </div>
-        <div class="hero-image">
-            <img src="/assets/images/hero.png" alt="Hero Image">
+        {{/movies}}
+    </div>
+    <button class="show-more" id="show-more-btn">Mostrar mais filmes...</button>
+</section>
+
+<section class="most-viewed">
+    <h2>FILMES MAIS VISTOS :</h2>
+    <div class="top-movies">
+        {{#topMovies}}
+        <div class="movie-card" data-rank="{{rank}}">
+            <img src="{{image}}" alt="{{title}}">
+            <div class="rank-number">{{rank}}</div>
         </div>
-        <div class="profile-placeholder">
-            <i class="fas fa-user-circle"></i>
-        </div>
+        {{/topMovies}}
     </div>
 </section>
 
-<section class="features">
-    <div class="container">
-        <h2 class="section-title">What I Do</h2>
-        <div class="features-grid">
-            {{#features}}
-            {{> feature-card}}
-            {{/features}}
-        </div>
-    </div>
+<section class="vip-pack">
+    <img src="{{vipBanner}}" alt="VIP Pack" class="vip-banner">
 </section>
 
-<section class="cta">
-    <div class="container">
-        <h2>{{cta.title}}</h2>
-        <p>{{cta.description}}</p>
-        <a href="./contact.html" class="btn btn-primary">{{cta.button}}</a>
+<section class="promo-packs">
+    {{#promoPacks}}
+    <div class="pack">
+        <img src="{{image}}" alt="{{title}}">
+        <p>{{description}}</p>
     </div>
+    {{/promoPacks}}
 </section>
+
+<footer>
+    <div class="footer-links">
+        {{#footerSections}}
+        <div>
+            <h4>{{title}}</h4>
+            <ul>
+                {{#links}}
+                <li>{{name}}</li>
+                {{/links}}
+            </ul>
+        </div>
+        {{/footerSections}}
+    </div>
+</footer>
+
+<script>
+    // Tabs functionality
+    document.querySelectorAll('.category-tab').forEach(tab => {
+        tab.addEventListener('click', function() {
+            document.querySelectorAll('.category-tab').forEach(t => t.classList.remove('active'));
+            this.classList.add('active');
+        });
+    });
+
+    // Show more movies
+    document.getElementById('show-more-btn').addEventListener('click', function() {
+        const hiddenMovies = document.querySelectorAll('.movie-card.hidden');
+        hiddenMovies.forEach(movie => {
+            movie.classList.remove('hidden');
+        });
+        this.style.display = 'none';
+    });
+
+    // Hero carousel: cycles background images and updates dots
+    (function(){
+        const images = {{{heroImagesJSON}}};
+        const hero = document.getElementById('hero');
+        const dots = document.querySelectorAll('.carousel-dots span');
+        let current = 0;
+        function setSlide(i){
+            current = (i + images.length) % images.length;
+            hero.style.backgroundImage = "url('" + images[current] + "')";
+            dots.forEach((d, idx) => d.classList.toggle('active', idx === current));
+        }
+        dots.forEach(d => d.addEventListener('click', function(){
+            const idx = parseInt(this.getAttribute('data-index'));
+            setSlide(idx);
+            resetTimer();
+        }));
+        let timer = setInterval(()=> setSlide(current+1), 5000);
+        function resetTimer(){ clearInterval(timer); timer = setInterval(()=> setSlide(current+1), 5000); }
+        // init
+        setSlide(0);
+    })();
+</script>
 {{/main}}
 {{/layout}}

@@ -1,34 +1,59 @@
 {
-  "title": "Home",
+  "title": "Cinema City - Home",
   "hero": {
-    "title": "Welcome to My Portfolio",
-    "subtitle": "Full Stack Developer & Creative Problem Solver",
-    "buttons": {
-      "projects": "View My Work",
-      "contact": "Get In Touch"
-    }
+    "actors": "Colin Farrell & Margot Robbie",
+    "title": "Uma Grande, Corajosa e Bela Viagem",
+    "subtitle": "Exclusivo em cinemas",
+    "date": "18 de Setembro",
+    "carouselDots": [
+      {"index": 0, "active": true},
+      {"index": 1, "active": false},
+      {"index": 2, "active": false},
+      {"index": 3, "active": false},
+      {"index": 4, "active": false}
+    ]
   },
-  "features": [
-    {
-      "icon": "fas fa-code",
-      "title": "Web Development",
-      "description": "Creating responsive and modern web applications using the latest technologies and best practices for optimal user experience."
-    },
-    {
-      "icon": "fas fa-mobile-alt",
-      "title": "Mobile Development",
-      "description": "Building cross-platform mobile applications with React Native and Flutter for both iOS and Android platforms."
-    },
-    {
-      "icon": "fas fa-database",
-      "title": "Backend Development",
-      "description": "Designing and implementing robust APIs, databases, and server-side solutions using modern technologies and best practices."
-    }
+  "heroImagesJSON": "[\"assets/FUNDO.jpg\",\"assets/banner.jpg\",\"assets/promo.jpg\",\"assets/promo2.jpg\",\"assets/capa1.jpg\"]",
+  "categories": [
+    {"id": "big-vip", "name": "BIG VIP", "active": true},
+    {"id": "brevemente", "name": "BREVEMENTE", "active": false},
+    {"id": "em-exibicao", "name": "EM EXIBIÇÃO", "active": false},
+    {"id": "kids", "name": "KIDS", "active": false},
+    {"id": "pre-vendas", "name": "PRÉ-VENDAS", "active": false}
   ],
-  "cta": {
-    "title": "Ready to Start a Project?",
-    "description": "Let's work together to bring your ideas to life",
-    "button": "Start Conversation"
-  }
+  "movies": [
+    {"title": "DEPOIS DA CAÇAÇA", "image": "assets/capa1.jpg", "genre": "Animação", "rating": "M12 - 97 min."},
+    {"title": "GATO FANTASMA ANZU", "image": "assets/capa 2.jpg", "genre": "Animação", "rating": "M12 - 97 min."},
+    {"title": "UM LADRÃO NO TELHADO", "image": "assets/capa 3.jpg", "genre": "Animação", "rating": "M12 - 97 min."},
+    {"title": "PARTIR, UM DIA", "image": "assets/capa 4.jpg", "genre": "Animação", "rating": "M12 - 97 min."},
+    {"title": "SNOW PRINCESA", "image": "assets/capa 5.jpg", "genre": "Animação", "rating": "M12 - 97 min."},
+    {"title": "O TELEFONE NEGRO 2", "image": "assets/capa 6.jpg", "genre": "Animação", "rating": "M12 - 97 min."}
+  ],
+  "topMovies": [
+    {"rank": 1, "title": "The Conjuring 4", "image": "assets/capa 9.jpg"},
+    {"rank": 2, "title": "Abril", "image": "assets/capa 10.jpg"},
+    {"rank": 3, "title": "Jolly LLB 3", "image": "assets/capa 12.jpg"}
+  ],
+  "vipBanner": "assets/banner.jpg",
+  "promoPacks": [
+    {"title": "Pack Quartas", "image": "assets/promo.jpg", "description": "Pack Quartas - Pipoca Pequena, Bebida Média, Bilhete Cinema"},
+    {"title": "Pack Total", "image": "assets/promo2.jpg", "description": "Pack Total - Pipocas Pequena, Bebida 50cl, Bilhete"}
+  ],
+  "footerSections": [
+    {
+      "title": "Serviços Exclusivos",
+      "links": [{"name": "Festas Aniversário"}]
+    },
+    {
+      "title": "Cinema City",
+      "links": [
+        {"name": "Contactos"},
+        {"name": "Normas Cinema City"},
+        {"name": "Parcerias"},
+        {"name": "Publicidade"},
+        {"name": "Trabalhe connosco"}
+      ]
+    }
+  ]
 }
 

@@ -1,0 +1,58 @@
+{
+  "title": "Cinemas — CinemaCity",
+  "styles": ["assets/css/cinemas.css"],
+  "hero": {
+    "title": "Cinema City",
+    "description": "O Cinema City é uma das principais redes de cinemas em Portugal, com complexos modernos e salas equipadas para garantir a melhor experiência no grande ecrã. Vem viver o cinema connosco e descobre também os nossos formatos especiais, pensados para tornar cada sessão ainda mais emocionante."
+  },
+  "cinemas": [
+    {"name": "CINEMA 1", "image": "assets/images/gallery/Cinema 1.jpg"},
+    {"name": "CINEMA 2", "image": "assets/images/gallery/cinema 2.jpg"},
+    {"name": "CINEMA 3", "image": "assets/images/gallery/cinema 3.jpg"},
+    {"name": "CINEMA 4", "image": "assets/images/gallery/cinema 4.jpg"},
+    {"name": "CINEMA 5", "image": "assets/images/gallery/cinema 5.jpg"}
+  ],
+  "membership": {
+    "title": "ADIRA JÁ",
+    "image": "assets/images/gallery/banner.jpg",
+    "benefits": [
+      {"icon": "📱", "text": "Benefícios exclusivos para membros"},
+      {"icon": "⭐", "text": "Pontos em cada compra"},
+      {"icon": "🎁", "text": "Descontos em alimentos e bebidas"}
+    ]
+  },
+  "loyalty": {
+    "title": "Mais Cinema City",
+    "description1": "No Cinema City, queremos premiar os verdadeiros fãs de cinema, os que não perdem uma única oportunidade para nos visitar.",
+    "description2": "Foi a pensar neles que desenvolvemos o MAIS CINEMA CITY, um programa de atribuição de pontos que premia os clientes mais assíduos. Os pontos ganhos podem ser trocados por prémios, ou utilizar nas próximas visitas aos nossos cinemas.",
+    "buttonText": "TABELA DE PONTOS"
+  },
+  "vipFood": [
+    {"image": "assets/images/gallery/promo.jpg", "alt": "VIP", "class": "vip-badge"},
+    {"image": "assets/images/gallery/promo2.jpg", "alt": "Hot Dog", "class": "food-item"},
+    {"image": "assets/images/gallery/banner.jpg", "alt": "Pizza", "class": "food-item"},
+    {"image": "assets/images/gallery/capa1.jpg", "alt": "Sunflower", "class": "food-item"}
+  ],
+  "packs": [
+    {
+      "title": "PACK QUARTAS",
+      "image": "assets/images/gallery/capa 2.jpg",
+      "description": "Pípoca pequena • Bebida média • Bilhete cinema"
+    },
+    {
+      "title": "Pack Total 11,50€",
+      "image": "assets/images/gallery/capa 3.jpg",
+      "description": "Pipocas pequena • Bebida sol • Bilhete"
+    }
+  ],
+  "footerSections": [
+    {
+      "title": "Serviços Exclusivos",
+      "items": ["Festas Aniversário"]
+    },
+    {
+      "title": "Cinema City",
+      "items": ["Contactos", "Normas Cinema City", "Parcerias", "Publicidade", "Trabalhe connosco"]
+    }
+  ]
+}

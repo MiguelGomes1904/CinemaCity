@@ -1,0 +1,96 @@
+{{<layout}}
+{{$main}}
+<!-- HERO -->
+<section class="hero-cinemas">
+  <div class="hero-content-cinemas">
+    <h1>{{hero.title}}</h1>
+    <p>{{hero.description}}</p>
+  </div>
+</section>
+
+<!-- CINEMAS -->
+<section class="cinemas-section">
+  <h2>Cinemas</h2>
+  <div class="cinema-cards-grid">
+    {{#cinemas}}
+    <div class="cinema-card">
+      <img src="{{image}}" alt="{{name}}">
+      <h3>{{name}}</h3>
+    </div>
+    {{/cinemas}}
+  </div>
+</section>
+
+<!-- ADIRA JÁ -->
+<section class="adira-section">
+  <div class="container">
+    <div class="adira-grid">
+      <div class="adira-left">
+        <h3>{{membership.title}}</h3>
+        <img src="{{membership.image}}" alt="{{membership.title}}" style="width: 180px; border-radius: 8px;">
+      </div>
+      <div class="adira-right">
+        {{#membership.benefits}}
+        <div class="adira-item">
+          <div class="adira-icon">{{icon}}</div>
+          <p>{{text}}</p>
+        </div>
+        {{/membership.benefits}}
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAIS CINEMA CITY -->
+<section class="mais-cinema">
+  <div class="container">
+    <h2>{{loyalty.title}}</h2>
+    <p>{{loyalty.description1}}</p>
+    <p>{{loyalty.description2}}</p>
+    <button class="btn-tabela">{{loyalty.buttonText}}</button>
+  </div>
+</section>
+
+<!-- VIP & FOOD -->
+<section class="vip-section">
+  <div class="vip-content">
+    {{#vipFood}}
+    <img src="{{image}}" alt="{{alt}}" class="{{class}}">
+    {{/vipFood}}
+  </div>
+</section>
+
+<!-- PACKS -->
+<section class="packs-section">
+  <div class="container">
+    <div class="packs-grid">
+      {{#packs}}
+      <div class="pack">
+        <img src="{{image}}" alt="{{title}}" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px 8px 0 0;">
+        <div class="pack-info">
+          <h4>{{title}}</h4>
+          <p>{{description}}</p>
+        </div>
+      </div>
+      {{/packs}}
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-content">
+      {{#footerSections}}
+      <div class="footer-col">
+        <h4>{{title}}</h4>
+        {{#items}}
+        <p>{{.}}</p>
+        {{/items}}
+      </div>
+      {{/footerSections}}
+    </div>
+  </div>
+</footer>
+{{/main}}
+{{/layout}}
