@@ -2,57 +2,65 @@
 {{$main}}
 
 <section class="products-hero" style="background-color: {{hero.background}};">
-  <div class="container hero-grid">
-    <div class="hero-copy">
-      <p class="hero-kicker">{{hero.kicker}}</p>
-      <h1>{{hero.title}}</h1>
-      <p class="hero-subtitle">{{hero.subtitle}}</p>
-      <a class="btn btn-primary hero-btn" href="{{hero.cta.href}}">{{hero.cta.label}}</a>
+  <img src="{{hero.image}}" alt="{{hero.imageAlt}}" class="hero-banner-img">
+</section>
+
+<section class="products-intro">
+  <div class="products-intro-container">
+    <div class="products-intro-text">
+      <h2>{{intro.title}}</h2>
+      <p>{{intro.body}}</p>
+      <a class="btn" href="{{intro.cta.href}}">{{intro.cta.label}}</a>
     </div>
-    <div class="hero-figure">
-      <img src="{{hero.image}}" alt="{{hero.imageAlt}}">
-      <div class="hero-price">{{hero.price}}</div>
+    <div class="products-intro-image">
+      <img src="/assets/images/gallery/PIOC.png" alt="Pipocas">
     </div>
   </div>
 </section>
 
-<section class="products-intro container">
-  <h2>{{intro.title}}</h2>
-  <p>{{intro.body}}</p>
-  <a class="btn btn-outline-primary" href="{{intro.cta.href}}">{{intro.cta.label}}</a>
+<section class="footer-banner" style="background-image: url('http://localhost/cinemacity/assets/images/gallery/faixa.jpg'); background-size: cover; background-position: center;">
 </section>
 
 <section id="food" class="food-strip">
-  <div class="food-strip-inner container">
+  <div class="food-strip-inner">
     {{#foodStrip}}
+    {{#@index}}
     <div class="food-card" style="background-color: {{background}};">
       <img src="{{image}}" alt="{{alt}}">
     </div>
+    {{/@index}}
     {{/foodStrip}}
   </div>
 </section>
 
-<section class="promo-banners container">
+<section class="promo-banners">
   <div class="banners-grid">
-    {{#banners}}
-    <div class="promo-banner" style="background-color: {{background}};">
+    {{#products}}
+    {{#featured}}
+    <div class="promo-banner" style="background-color: {{color}};">
       <div class="banner-content">
-        <p class="banner-kicker">{{kicker}}</p>
-        <h3 class="banner-title">{{title}}</h3>
-        <p class="banner-subtitle">{{subtitle}}</p>
+        <p class="banner-kicker">{{name}}</p>
+        <h3 class="banner-title">{{name}}</h3>
+        <p class="banner-subtitle">{{details}}</p>
         <div class="banner-price">{{price}}</div>
       </div>
       <div class="banner-image">
-        <img src="{{image}}" alt="{{title}}">
+        <img src="{{image}}" alt="{{name}}">
       </div>
     </div>
-    {{/banners}}
+    {{/featured}}
+    {{/products}}
   </div>
 </section>
 
-<section class="products-mini-footer">
-  <a href="{{miniFooter.href}}">{{miniFooter.label}}</a>
+<section class="food-banner" style="background-image: url('/assets/images/gallery/promo.jpg'); background-size: cover; background-position: center;">
 </section>
 
 {{/main}}
 {{/layout}}
+
+<footer class="mini-footer" style="background-image: url('/assets/images/gallery/banner.jpg'); background-size: cover; background-position: center; background-attachment: fixed;">
+  <div class="mini-footer-overlay">
+    <a href="{{miniFooter.href}}">{{miniFooter.label}}</a>
+  </div>
+</footer>

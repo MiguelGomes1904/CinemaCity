@@ -1,48 +1,48 @@
 {
-  "title": "Produtos",
+  "title": "Produtos - Cinema City",
   "styles": ["/assets/css/products.css"],
   "hero": {
     "background": "#00a5a5",
-    "kicker": "Pack Total",
-    "title": "Pipocas + Bebida 50cl + Bilhete",
-    "subtitle": "Pipoca pequena, bebida 50cl e bilhete no mesmo pack.",
+    "kicker": "Pack Premium",
+    "title": "Pipocas + Bebida Grande + Bilhete Cinema",
+    "subtitle": "A experiência completa ao melhor preço. Pipoca pequena, bebida 50cl e bilhete no mesmo pack.",
     "image": "/assets/images/gallery/promo2.jpg",
     "imageAlt": "Pack Total",
     "price": "11,50€",
     "cta": {
-      "label": "Comprar artigos de bar",
+      "label": "Comprar Agora",
       "href": "#food"
     }
   },
   "intro": {
     "title": "O primeiro passo para ver um bom filme? Pipocas, claro!",
-    "body": "Menus, pipocas, bebidas e muito mais.",
+    "body": "Menus, pipocas, bebidas gourmet e muito mais. Qualidade premium para uma experiência de cinema inesquecível.",
     "cta": {
       "label": "Comprar artigos de bar",
       "href": "#food"
     }
   },
   "foodStrip": [
-    { "image": "/assets/images/gallery/promo.jpg", "alt": "VIP", "background": "#0b223b" },
-    { "image": "/assets/images/gallery/banner.jpg", "alt": "Hot dog", "background": "#0b223b" },
-    { "image": "/assets/images/gallery/promo2.jpg", "alt": "Pizza", "background": "#0b223b" }
+    { "image": "/assets/images/gallery/promo.jpg", "alt": "Pipocas Especiais", "background": "#0b223b" },
+    { "image": "/assets/images/gallery/banner.jpg", "alt": "Bebidas Premium", "background": "#0b223b" },
+    { "image": "/assets/images/gallery/promo2.jpg", "alt": "Combos Especiais", "background": "#0b223b" }
   ],
-  "banners": [
+  "products": [
     {
-      "background": "#f6a821",
-      "kicker": "Pack Quartas",
-      "title": "Pack Quartas",
-      "subtitle": "Pipoca pequena, bebida média, bilhete cinema",
+      "name": "Pack Quartas",
+      "details": "Pipoca pequena + Bebida média + Bilhete cinema",
       "price": "10,50€",
-      "image": "/assets/images/gallery/banner.jpg"
+      "image": "/assets/images/gallery/banner.jpg",
+      "color": "#f6a821",
+      "featured": true
     },
     {
-      "background": "#00a5a5",
-      "kicker": "Pack Total",
-      "title": "Pack Total",
-      "subtitle": "Pipocas pequena + bebida 50cl + bilhete",
+      "name": "Pack Total",
+      "details": "Pipoca pequena + Bebida 50cl + Bilhete cinema",
       "price": "11,50€",
-      "image": "/assets/images/gallery/promo2.jpg"
+      "image": "/assets/images/gallery/promo2.jpg",
+      "color": "#00a5a5",
+      "featured": true
     }
   ],
   "miniFooter": {
@@ -50,3 +50,4 @@
     "href": "#"
   }
 }
+

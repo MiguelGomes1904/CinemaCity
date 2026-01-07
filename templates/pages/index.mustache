@@ -1,6 +1,6 @@
 {{<layout}}
 {{$main}}
-<section id="hero" class="hero">
+<section id="hero" class="hero" style="background-image: url('{{heroBackground}}');">
     <div class="hero-content">
         <h2>{{hero.actors}}</h2>
         <h1>{{hero.title}}</h1>
@@ -36,7 +36,7 @@
     <div class="movies">
         {{#movies}}
         <div class="movie-card">
-            <a href="movie.html"><img src="{{image}}" alt="{{title}}"></a>
+            <a href="movie.html?id={{@index}}"><img src="{{image}}" alt="{{title}}"></a>
             <div class="movie-info">
                 <h3>{{title}}</h3>
                 <p class="genre">{{genre}}</p>
@@ -108,7 +108,7 @@
 
     // Hero carousel: cycles background images and updates dots
     (function(){
-        const images = {{{heroImagesJSON}}};
+        const images = JSON.parse('{{{heroImagesJSON}}}');
         const hero = document.getElementById('hero');
         const dots = document.querySelectorAll('.carousel-dots span');
         let current = 0;

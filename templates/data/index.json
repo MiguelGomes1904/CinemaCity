@@ -1,5 +1,6 @@
 {
   "title": "Cinema City - Home",
+  "heroBackground": "/assets/images/gallery/FUNDO.jpg",
   "hero": {
     "actors": "Colin Farrell & Margot Robbie",
     "title": "Uma Grande, Corajosa e Bela Viagem",
@@ -13,7 +14,7 @@
       {"index": 4, "active": false}
     ]
   },
-  "heroImagesJSON": "[\"assets/FUNDO.jpg\",\"assets/banner.jpg\",\"assets/promo.jpg\",\"assets/promo2.jpg\",\"assets/capa1.jpg\"]",
+  "heroImagesJSON": "[\"/CinemaCity/assets/images/gallery/FUNDO.jpg\",\"/CinemaCity/assets/images/gallery/banner.jpg\",\"/CinemaCity/assets/images/gallery/promo.jpg\",\"/CinemaCity/assets/images/gallery/promo2.jpg\",\"/CinemaCity/assets/images/gallery/capa1.jpg\"]",
   "categories": [
     {"id": "big-vip", "name": "BIG VIP", "active": true},
     {"id": "brevemente", "name": "BREVEMENTE", "active": false},
@@ -22,22 +23,22 @@
     {"id": "pre-vendas", "name": "PRÉ-VENDAS", "active": false}
   ],
   "movies": [
-    {"title": "DEPOIS DA CAÇAÇA", "image": "assets/capa1.jpg", "genre": "Animação", "rating": "M12 - 97 min."},
-    {"title": "GATO FANTASMA ANZU", "image": "assets/capa 2.jpg", "genre": "Animação", "rating": "M12 - 97 min."},
-    {"title": "UM LADRÃO NO TELHADO", "image": "assets/capa 3.jpg", "genre": "Animação", "rating": "M12 - 97 min."},
-    {"title": "PARTIR, UM DIA", "image": "assets/capa 4.jpg", "genre": "Animação", "rating": "M12 - 97 min."},
-    {"title": "SNOW PRINCESA", "image": "assets/capa 5.jpg", "genre": "Animação", "rating": "M12 - 97 min."},
-    {"title": "O TELEFONE NEGRO 2", "image": "assets/capa 6.jpg", "genre": "Animação", "rating": "M12 - 97 min."}
+    {"title": "DEPOIS DA CAÇAÇA", "image": "/assets/images/gallery/capa1.jpg", "genre": "Animação", "rating": "M12 - 97 min."},
+    {"title": "GATO FANTASMA ANZU", "image": "/assets/images/gallery/capa 2.jpg", "genre": "Animação", "rating": "M12 - 97 min."},
+    {"title": "UM LADRÃO NO TELHADO", "image": "/assets/images/gallery/capa 3.jpg", "genre": "Animação", "rating": "M12 - 97 min."},
+    {"title": "PARTIR, UM DIA", "image": "/assets/images/gallery/capa 4.jpg", "genre": "Animação", "rating": "M12 - 97 min."},
+    {"title": "SNOW PRINCESA", "image": "/assets/images/gallery/capa 5.jpg", "genre": "Animação", "rating": "M12 - 97 min."},
+    {"title": "O TELEFONE NEGRO 2", "image": "/assets/images/gallery/capa 6.jpg", "genre": "Animação", "rating": "M12 - 97 min."}
   ],
   "topMovies": [
-    {"rank": 1, "title": "The Conjuring 4", "image": "assets/capa 9.jpg"},
-    {"rank": 2, "title": "Abril", "image": "assets/capa 10.jpg"},
-    {"rank": 3, "title": "Jolly LLB 3", "image": "assets/capa 12.jpg"}
+    {"rank": 1, "title": "The Conjuring 4", "image": "/assets/images/gallery/capa 9.jpg"},
+    {"rank": 2, "title": "Abril", "image": "/assets/images/gallery/capa 10.jpg"},
+    {"rank": 3, "title": "Jolly LLB 3", "image": "/assets/images/gallery/capa 12.jpg"}
   ],
-  "vipBanner": "assets/banner.jpg",
+  "vipBanner": "/assets/images/gallery/banner.jpg",
   "promoPacks": [
-    {"title": "Pack Quartas", "image": "assets/promo.jpg", "description": "Pack Quartas - Pipoca Pequena, Bebida Média, Bilhete Cinema"},
-    {"title": "Pack Total", "image": "assets/promo2.jpg", "description": "Pack Total - Pipocas Pequena, Bebida 50cl, Bilhete"}
+    {"title": "Pack Quartas", "image": "/assets/images/gallery/promo.jpg", "description": "Pack Quartas - Pipoca Pequena, Bebida Média, Bilhete Cinema"},
+    {"title": "Pack Total", "image": "/assets/images/gallery/promo2.jpg", "description": "Pack Total - Pipocas Pequena, Bebida 50cl, Bilhete"}
   ],
   "footerSections": [
     {

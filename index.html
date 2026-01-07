@@ -52,7 +52,7 @@
     
     <main>
         
-<section id="hero" class="hero">
+<section id="hero" class="hero" style="background-image: url('http://localhost/cinemacity/assets/images/gallery/FUNDO.jpg');">
     <div class="hero-content">
         <h2>Colin Farrell & Margot Robbie</h2>
         <h1>Uma Grande, Corajosa e Bela Viagem</h1>
@@ -91,7 +91,7 @@
 <section class="movie-list">
     <div class="movies">
         <div class="movie-card">
-            <a href="movie.html"><img src="assets/capa1.jpg" alt="DEPOIS DA CAÇAÇA"></a>
+            <a href="movie.html?id="><img src="http://localhost/cinemacity/assets/images/gallery/capa1.jpg" alt="DEPOIS DA CAÇAÇA"></a>
             <div class="movie-info">
                 <h3>DEPOIS DA CAÇAÇA</h3>
                 <p class="genre">Animação</p>
@@ -99,7 +99,7 @@
             </div>
         </div>
         <div class="movie-card">
-            <a href="movie.html"><img src="assets/capa 2.jpg" alt="GATO FANTASMA ANZU"></a>
+            <a href="movie.html?id="><img src="http://localhost/cinemacity/assets/images/gallery/capa 2.jpg" alt="GATO FANTASMA ANZU"></a>
             <div class="movie-info">
                 <h3>GATO FANTASMA ANZU</h3>
                 <p class="genre">Animação</p>
@@ -107,7 +107,7 @@
             </div>
         </div>
         <div class="movie-card">
-            <a href="movie.html"><img src="assets/capa 3.jpg" alt="UM LADRÃO NO TELHADO"></a>
+            <a href="movie.html?id="><img src="http://localhost/cinemacity/assets/images/gallery/capa 3.jpg" alt="UM LADRÃO NO TELHADO"></a>
             <div class="movie-info">
                 <h3>UM LADRÃO NO TELHADO</h3>
                 <p class="genre">Animação</p>
@@ -115,7 +115,7 @@
             </div>
         </div>
         <div class="movie-card">
-            <a href="movie.html"><img src="assets/capa 4.jpg" alt="PARTIR, UM DIA"></a>
+            <a href="movie.html?id="><img src="http://localhost/cinemacity/assets/images/gallery/capa 4.jpg" alt="PARTIR, UM DIA"></a>
             <div class="movie-info">
                 <h3>PARTIR, UM DIA</h3>
                 <p class="genre">Animação</p>
@@ -123,7 +123,7 @@
             </div>
         </div>
         <div class="movie-card">
-            <a href="movie.html"><img src="assets/capa 5.jpg" alt="SNOW PRINCESA"></a>
+            <a href="movie.html?id="><img src="http://localhost/cinemacity/assets/images/gallery/capa 5.jpg" alt="SNOW PRINCESA"></a>
             <div class="movie-info">
                 <h3>SNOW PRINCESA</h3>
                 <p class="genre">Animação</p>
@@ -131,7 +131,7 @@
             </div>
         </div>
         <div class="movie-card">
-            <a href="movie.html"><img src="assets/capa 6.jpg" alt="O TELEFONE NEGRO 2"></a>
+            <a href="movie.html?id="><img src="http://localhost/cinemacity/assets/images/gallery/capa 6.jpg" alt="O TELEFONE NEGRO 2"></a>
             <div class="movie-info">
                 <h3>O TELEFONE NEGRO 2</h3>
                 <p class="genre">Animação</p>
@@ -146,31 +146,31 @@
     <h2>FILMES MAIS VISTOS :</h2>
     <div class="top-movies">
         <div class="movie-card" data-rank="1">
-            <img src="assets/capa 9.jpg" alt="The Conjuring 4">
+            <img src="http://localhost/cinemacity/assets/images/gallery/capa 9.jpg" alt="The Conjuring 4">
             <div class="rank-number">1</div>
         </div>
         <div class="movie-card" data-rank="2">
-            <img src="assets/capa 10.jpg" alt="Abril">
+            <img src="http://localhost/cinemacity/assets/images/gallery/capa 10.jpg" alt="Abril">
             <div class="rank-number">2</div>
         </div>
         <div class="movie-card" data-rank="3">
-            <img src="assets/capa 12.jpg" alt="Jolly LLB 3">
+            <img src="http://localhost/cinemacity/assets/images/gallery/capa 12.jpg" alt="Jolly LLB 3">
             <div class="rank-number">3</div>
         </div>
     </div>
 </section>
 
 <section class="vip-pack">
-    <img src="assets/banner.jpg" alt="VIP Pack" class="vip-banner">
+    <img src="http://localhost/cinemacity/assets/images/gallery/banner.jpg" alt="VIP Pack" class="vip-banner">
 </section>
 
 <section class="promo-packs">
     <div class="pack">
-        <img src="assets/promo.jpg" alt="Pack Quartas">
+        <img src="http://localhost/cinemacity/assets/images/gallery/promo.jpg" alt="Pack Quartas">
         <p>Pack Quartas - Pipoca Pequena, Bebida Média, Bilhete Cinema</p>
     </div>
     <div class="pack">
-        <img src="assets/promo2.jpg" alt="Pack Total">
+        <img src="http://localhost/cinemacity/assets/images/gallery/promo2.jpg" alt="Pack Total">
         <p>Pack Total - Pipocas Pequena, Bebida 50cl, Bilhete</p>
     </div>
 </section>
@@ -216,7 +216,7 @@
 
     // Hero carousel: cycles background images and updates dots
     (function(){
-        const images = ["assets/FUNDO.jpg","assets/banner.jpg","assets/promo.jpg","assets/promo2.jpg","assets/capa1.jpg"];
+        const images = JSON.parse('["/CinemaCity/assets/images/gallery/FUNDO.jpg","/CinemaCity/assets/images/gallery/banner.jpg","/CinemaCity/assets/images/gallery/promo.jpg","/CinemaCity/assets/images/gallery/promo2.jpg","/CinemaCity/assets/images/gallery/capa1.jpg"]');
         const hero = document.getElementById('hero');
         const dots = document.querySelectorAll('.carousel-dots span');
         let current = 0;
