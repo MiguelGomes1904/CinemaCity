@@ -261,7 +261,7 @@ document.addEventListener('DOMContentLoaded', function() {
         );
 
         if (session) {
-            window.location.href = `movie.html?id=${selectedMovie}&session=${session.id}`;
+            window.location.href = `checkout-seats.html?session=${session.id}`;
         } else {
             alert('Sessão não encontrada.');
         }

@@ -1,0 +1,570 @@
+<!-- Checkout Seats Template for Cinema City -->
+{{<layout}}
+{{$main}}
+
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+        background: linear-gradient(135deg, #001a40 0%, #0d3b66 100%);
+        font-family: 'Segoe UI', Arial, sans-serif;
+        min-height: 100vh;
+        padding: 20px;
+    }
+
+    .seats-container {
+        display: flex;
+        gap: 30px;
+        max-width: 1200px;
+        margin: 0 auto;
+        min-height: 80vh;
+        align-items: stretch;
+    }
+
+    /* Left Panel */
+    .info-panel {
+        flex: 0 0 300px;
+        background: linear-gradient(135deg, #0d3b66 0%, #1a5a96 100%);
+        padding: 30px;
+        border-radius: 12px;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .info-panel h2 {
+        font-size: 1.8em;
+        margin-bottom: 15px;
+        font-weight: 700;
+    }
+
+    .cinema-address {
+        font-size: 0.85em;
+        opacity: 0.9;
+        margin-bottom: 20px;
+        line-height: 1.6;
+    }
+
+    .movie-info {
+        margin-top: 20px;
+        padding-top: 20px;
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .movie-info h3 {
+        font-size: 0.9em;
+        opacity: 0.8;
+        margin-bottom: 8px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .movie-title {
+        font-size: 1.1em;
+        font-weight: 600;
+        margin-bottom: 8px;
+    }
+
+    .movie-details {
+        font-size: 0.85em;
+        opacity: 0.85;
+        margin-bottom: 5px;
+    }
+
+    .price-section {
+        margin-top: auto;
+        padding-top: 20px;
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .seats-count {
+        font-size: 0.9em;
+        opacity: 0.8;
+        margin-bottom: 10px;
+    }
+
+    .total-price {
+        font-size: 1.1em;
+        margin-bottom: 5px;
+    }
+
+    .total-price strong {
+        font-size: 1.4em;
+        display: block;
+        color: #ffd700;
+    }
+
+    .price-note {
+        font-size: 0.75em;
+        opacity: 0.7;
+        margin-top: 5px;
+    }
+
+    /* Right Panel - Seats */
+    .seats-panel {
+        flex: 1;
+        background: #e0e0e0;
+        padding: 40px;
+        border-radius: 12px;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .screen-label {
+        text-align: center;
+        color: #555;
+        font-weight: 600;
+        margin-bottom: 30px;
+        font-size: 0.95em;
+        letter-spacing: 2px;
+    }
+
+    .seats-grid {
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        gap: 12px;
+        margin-bottom: 30px;
+        justify-content: center;
+    }
+
+    .seat {
+        width: 40px;
+        height: 40px;
+        border: 2px solid #999;
+        background: white;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: all 0.2s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.7em;
+        color: #666;
+        font-weight: 600;
+    }
+
+    .seat:hover:not(.reserved) {
+        transform: scale(1.05);
+        border-color: #0d3b66;
+    }
+
+    .seat.selected {
+        background: #0d3b66;
+        border-color: #0d3b66;
+        color: white;
+    }
+
+    .seat.reserved {
+        background: #e53935;
+        border-color: #c62828;
+        cursor: not-allowed;
+        opacity: 0.7;
+    }
+
+    .seat.reserved:hover {
+        transform: none;
+    }
+
+    .seat.disabled {
+        cursor: not-allowed;
+        opacity: 0.3;
+    }
+
+    /* Legend */
+    .legend {
+        display: flex;
+        gap: 30px;
+        justify-content: center;
+        padding: 20px;
+        background: rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        margin-top: auto;
+    }
+
+    .legend-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 0.9em;
+        color: #333;
+        font-weight: 500;
+    }
+
+    .legend-seat {
+        width: 30px;
+        height: 30px;
+        border: 2px solid #999;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .legend-seat.selected {
+        background: #0d3b66;
+        border-color: #0d3b66;
+    }
+
+    .legend-seat.reserved {
+        background: #e53935;
+        border-color: #c62828;
+    }
+
+    /* Action Buttons */
+    .action-buttons {
+        display: flex;
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    .btn-custom {
+        flex: 1;
+        padding: 14px 20px;
+        font-size: 1em;
+        font-weight: 600;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+
+    .btn-cancel {
+        background: #999;
+        color: white;
+    }
+
+    .btn-cancel:hover {
+        background: #777;
+    }
+
+    .btn-checkout {
+        background: #ff4444;
+        color: white;
+    }
+
+    .btn-checkout:hover:not(:disabled) {
+        background: #dd0000;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(255, 68, 68, 0.3);
+    }
+
+    .btn-checkout:disabled {
+        background: #ccc;
+        cursor: not-allowed;
+        opacity: 0.6;
+    }
+
+    /* Close Button */
+    .close-btn {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: none;
+        border: none;
+        font-size: 2em;
+        color: white;
+        cursor: pointer;
+        z-index: 1000;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        transition: all 0.3s;
+    }
+
+    .close-btn:hover {
+        background: rgba(255, 0, 0, 0.5);
+        transform: rotate(90deg);
+    }
+
+    /* Loading */
+    .loading {
+        text-align: center;
+        color: white;
+        padding: 40px;
+    }
+
+    /* Error */
+    .error-message {
+        background: #e53935;
+        color: white;
+        padding: 20px;
+        border-radius: 8px;
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .seats-container {
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .info-panel {
+            flex: none;
+            width: 100%;
+        }
+
+        .seats-panel {
+            flex: none;
+            width: 100%;
+        }
+
+        .seats-grid {
+            grid-template-columns: repeat(8, 1fr);
+            gap: 8px;
+        }
+
+        .seat {
+            width: 35px;
+            height: 35px;
+        }
+    }
+</style>
+
+<button class="close-btn" onclick="window.history.back();">
+    <i class="fas fa-times"></i>
+</button>
+
+<div class="seats-container" id="seatsContainer">
+    <!-- Info Panel -->
+    <div class="info-panel">
+        <div>
+            <h2 id="cinemaName">Cinema Alegro</h2>
+            <div class="cinema-address" id="cinemaAddress">
+                Avenida dos Cavaleiros 60,<br>
+                Portela de Carnaxide - 2790-045 Carnaxide
+            </div>
+
+            <div class="movie-info">
+                <h3>Sessão</h3>
+                <div class="movie-title" id="movieTitle">Título do Filme</div>
+                <div class="movie-details" id="sessionDateTime">2026-01-10 • 14:00</div>
+            </div>
+        </div>
+
+        <div>
+            <div class="price-section">
+                <div class="seats-count">
+                    <span id="selectedSeatsCount">0</span> Lugar<span id="pluralS">es</span>
+                </div>
+                <div class="total-price">
+                    Total: <strong id="totalPrice">0,00€</strong>
+                </div>
+                <div class="price-note">* IVA incluído</div>
+            </div>
+
+            <div class="action-buttons">
+                <button class="btn-custom btn-cancel" onclick="window.history.back();">Cancelar</button>
+                <button class="btn-custom btn-checkout" id="checkoutBtn" onclick="proceedToCheckout();" disabled>Confirmar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Seats Panel -->
+    <div class="seats-panel">
+        <div class="screen-label">Ecrã</div>
+        <div id="seatsError" class="error-message" style="display: none;"></div>
+        <div class="seats-grid" id="seatsGrid">
+            <div class="loading">
+                <i class="fas fa-spinner fa-spin"></i> Carregando assentos...
+            </div>
+        </div>
+
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-seat selected"></div>
+                <span>Selecionado</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-seat reserved"></div>
+                <span>Reservado</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-seat"></div>
+                <span>Livre</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Get session ID from URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const sessionId = urlParams.get('session');
+    
+    let selectedSeats = [];
+    let sessionData = null;
+    let movieData = null;
+
+    // Initialize
+    document.addEventListener('DOMContentLoaded', function() {
+        if (!sessionId) {
+            showError('Sessão não encontrada. Por favor, volte e selecione novamente.');
+            return;
+        }
+        loadSessionData();
+    });
+
+    // Load session data
+    async function loadSessionData() {
+        try {
+            console.log('Loading session:', sessionId);
+            const response = await fetch(`/CinemaCity/api/get-session.php?id=${sessionId}`);
+            const data = await response.json();
+
+            if (!data.success || !data.session) {
+                showError('Erro ao carregar dados da sessão.');
+                return;
+            }
+
+            sessionData = data.session;
+            await loadMovieData();
+            await loadSeats();
+        } catch (error) {
+            console.error('Error loading session:', error);
+            showError('Erro ao conectar ao servidor.');
+        }
+    }
+
+    // Load movie data
+    async function loadMovieData() {
+        try {
+            const response = await fetch(`/CinemaCity/api/get-movie.php?id=${sessionData.movie_id}`);
+            const data = await response.json();
+
+            if (data.success && data.movie) {
+                movieData = data.movie;
+                updateUIWithData();
+            }
+        } catch (error) {
+            console.error('Error loading movie:', error);
+        }
+    }
+
+    // Update UI with data
+    function updateUIWithData() {
+        if (!sessionData || !movieData) return;
+
+        // Update cinema name and address
+        document.getElementById('cinemaName').textContent = sessionData.cinema_name || 'Cinema City';
+        document.getElementById('cinemaAddress').innerHTML = 
+            (sessionData.cinema_address || 'Avenida dos Cavaleiros 60, Portela de Carnaxide - 2790-045 Carnaxide').replace(/\n/g, '<br>');
+
+        // Update movie and session info
+        document.getElementById('movieTitle').textContent = movieData.title || 'Filme';
+        
+        const sessionDate = new Date(sessionData.session_date + 'T' + sessionData.session_time);
+        const formattedDate = sessionDate.toLocaleDateString('pt-PT', { year: 'numeric', month: '2-digit', day: '2-digit' });
+        const formattedTime = sessionData.session_time.substring(0, 5);
+        document.getElementById('sessionDateTime').textContent = `${formattedDate} • ${formattedTime}`;
+    }
+
+    // Load and render seats
+    async function loadSeats() {
+        try {
+            const seatsGrid = document.getElementById('seatsGrid');
+            seatsGrid.innerHTML = '';
+
+            // For now, create a simple seat layout (10 columns x 8 rows = 80 seats)
+            const rows = 8;
+            const cols = 10;
+            let seatNumber = 1;
+
+            // Randomly reserve some seats for demonstration
+            const reservedSeats = new Set();
+            for (let i = 0; i < Math.floor(rows * cols * 0.3); i++) {
+                reservedSeats.add(Math.floor(Math.random() * (rows * cols)) + 1);
+            }
+
+            for (let row = 1; row <= rows; row++) {
+                for (let col = 1; col <= cols; col++) {
+                    const seat = document.createElement('div');
+                    const seatId = `${String.fromCharCode(64 + row)}${col}`;
+                    const isReserved = reservedSeats.has(seatNumber);
+
+                    seat.className = 'seat' + (isReserved ? ' reserved' : '');
+                    seat.textContent = seatId;
+                    seat.dataset.seatId = seatId;
+                    seat.dataset.seatNumber = seatNumber;
+
+                    if (!isReserved) {
+                        seat.addEventListener('click', toggleSeat);
+                    }
+
+                    seatsGrid.appendChild(seat);
+                    seatNumber++;
+                }
+            }
+        } catch (error) {
+            console.error('Error loading seats:', error);
+            showError('Erro ao carregar assentos.');
+        }
+    }
+
+    // Toggle seat selection
+    function toggleSeat(event) {
+        const seat = event.target.closest('.seat');
+        if (!seat || seat.classList.contains('reserved')) return;
+
+        const seatId = seat.dataset.seatId;
+
+        if (seat.classList.contains('selected')) {
+            seat.classList.remove('selected');
+            selectedSeats = selectedSeats.filter(s => s !== seatId);
+        } else {
+            seat.classList.add('selected');
+            selectedSeats.push(seatId);
+        }
+
+        updatePrice();
+    }
+
+    // Update price
+    function updatePrice() {
+        const count = selectedSeats.length;
+        const price = (sessionData?.price || 7.50) * count;
+
+        document.getElementById('selectedSeatsCount').textContent = count;
+        document.getElementById('pluralS').textContent = count === 1 ? '' : 'es';
+        document.getElementById('totalPrice').textContent = price.toFixed(2).replace('.', ',') + '€';
+
+        document.getElementById('checkoutBtn').disabled = count === 0;
+    }
+
+    // Proceed to checkout
+    function proceedToCheckout() {
+        if (selectedSeats.length === 0) {
+            alert('Por favor, selecione pelo menos um assento.');
+            return;
+        }
+
+        // Store selected seats and redirect
+        const queryString = new URLSearchParams({
+            session: sessionId,
+            seats: selectedSeats.join(','),
+            totalPrice: document.getElementById('totalPrice').textContent.replace('€', '').replace(',', '.')
+        }).toString();
+
+        window.location.href = `/CinemaCity/checkout.html?${queryString}`;
+    }
+
+    // Show error
+    function showError(message) {
+        const errorDiv = document.getElementById('seatsError');
+        if (errorDiv) {
+            errorDiv.textContent = message;
+            errorDiv.style.display = 'block';
+        }
+        document.getElementById('seatsGrid').innerHTML = '';
+    }
+</script>
+
+{{/main}}
+{{/layout}}
