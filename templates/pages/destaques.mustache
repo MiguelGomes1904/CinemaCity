@@ -3,8 +3,10 @@
 <!-- Hero Section -->
 <section class="destaques-hero">
     <div class="hero-image-container">
-        <img src="{{heroImage}}" alt="{{heroAlt}}" class="hero-image">
-        <div class="hero-overlay"></div>
+        <div class="hero-overlay">
+            <h2 class="hero-title">Destaques Cinema City</h2>
+            <p class="hero-subtitle">Conheça as nossas melhores promoções e experiências</p>
+        </div>
     </div>
 </section>
 
@@ -15,7 +17,7 @@
         
         <div class="destaques-grid">
             {{#highlights}}
-            <div class="destaque-card" data-id="{{id}}" style="background-color: {{bgColor}}; color: {{textColor}}">
+            <div class="destaque-card" data-id="{{id}}" style="background-color: {{bgColor}}; {{#textColor}}color: {{textColor}};{{/textColor}}">
                 <div class="card-content">
                     {{#icon}}
                     <div class="card-icon {{icon}}"></div>

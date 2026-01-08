@@ -1,0 +1,71 @@
+<!-- Product Drawer Modal -->
+<div class="product-drawer" id="productDrawer">
+    <div class="drawer-content">
+        <button class="drawer-close" onclick="closeProductDrawer()">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </button>
+        
+        <div class="drawer-header">
+            <h2 class="drawer-title">Em que Cinema City pretende levantar os teus artigos de Bar?</h2>
+        </div>
+        
+        <div class="drawer-locations">
+            {{#locations}}
+            <button class="location-option" onclick="selectLocation('{{id}}', '{{name}}')">
+                <span class="location-name">{{name}}</span>
+                <span class="location-icon">→</span>
+            </button>
+            {{/locations}}
+        </div>
+    </div>
+</div>
+
+<script>
+function openProductDrawer() {
+    const drawer = document.getElementById('productDrawer');
+    if (drawer) {
+        drawer.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+}
+
+function closeProductDrawer() {
+    const drawer = document.getElementById('productDrawer');
+    if (drawer) {
+        drawer.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    }
+}
+
+function selectLocation(locationId, locationName) {
+    console.log('Selected location:', locationId, locationName);
+    // Guardar a localização selecionada e redirecionar ou atualizar página
+    localStorage.setItem('selectedCinemaLocation', locationId);
+    localStorage.setItem('selectedCinemaName', locationName);
+    
+    // Redirecionar para página de produtos ou fechar drawer
+    closeProductDrawer();
+    // Opcional: redirecionar para página de checkout ou cart
+    // window.location.href = '/checkout?location=' + locationId;
+}
+
+// Fechar drawer ao clicar fora
+document.addEventListener('click', function(event) {
+    const drawer = document.getElementById('productDrawer');
+    if (drawer && drawer.classList.contains('active')) {
+        if (!drawer.querySelector('.drawer-content').contains(event.target)) {
+            closeProductDrawer();
+        }
+    }
+});
+
+// Fechar drawer ao pressionar ESC
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        closeProductDrawer();
+    }
+});
+</script>

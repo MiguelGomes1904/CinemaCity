@@ -21,6 +21,9 @@
     <!-- Latest compiled and minified CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">    
     <link rel="stylesheet" href="http://localhost/cinemacity/assets/css/styles.css">
+    <link rel="stylesheet" href="http://localhost/cinemacity/assets/css/destaques.css">
+    <link rel="stylesheet" href="http://localhost/cinemacity/assets/css/product-drawer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
      <link rel="stylesheet" href="http://localhost/cinemacity/assets/css/products.css">
        
@@ -63,7 +66,7 @@
     <div class="products-intro-text">
       <h2>O primeiro passo para ver um bom filme? Pipocas, claro!</h2>
       <p>Menus, pipocas, bebidas gourmet e muito mais. Qualidade premium para uma experiência de cinema inesquecível.</p>
-      <a class="btn" href="#food">Comprar artigos de bar</a>
+      <button type="button" class="btn" onclick="console.log('Button clicked!'); openProductDrawer(); return false;">Comprar artigos de bar</button>
     </div>
     <div class="products-intro-image">
       <img src="http://localhost/cinemacity/assets/images/gallery/PIOC.png" alt="Pipocas">
@@ -108,6 +111,201 @@
 
 <section class="food-banner" style="background-image: url('/assets/images/gallery/promo.jpg'); background-size: cover; background-position: center;">
 </section>
+
+<!-- Overlay shared by both drawers -->
+<div id="drawerOverlay" style="display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.55); z-index: 9998;" onclick="closeAllDrawers()"></div>
+
+<!-- Drawer 1: Seleção de localização -->
+<div id="productDrawer" style="display: none; position: fixed; right: 0; top: 0; width: 100%; max-width: 500px; height: 100vh; background: linear-gradient(135deg, #0f2847 0%, #1a3a52 100%); z-index: 9999; overflow-y: auto; box-shadow: -8px 0 30px rgba(0, 0, 0, 0.5);">
+  <div style="position: relative; width: 100%; height: 100%; display: flex; flex-direction: column; padding: 40px 30px;">
+    <button onclick="closeAllDrawers()" style="position: absolute; top: 20px; left: 20px; background: none; border: none; color: #fff; cursor: pointer; padding: 10px; font-size: 24px; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">
+      ✕
+    </button>
+        
+    <div style="margin-top: 30px; margin-bottom: 50px;">
+      <h2 style="font-size: 2rem; font-weight: 900; color: #fff; line-height: 1.3; margin: 0; text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);">Em que Cinema City pretende levantar os teus artigos de Bar?</h2>
+    </div>
+        
+    <div style="display: flex; flex-direction: column; gap: 20px; flex: 1;">
+      <button onclick="selectLocation('alfragide')" style="padding: 18px 25px; background: rgba(255, 255, 255, 0.05); border: 2px solid rgba(255, 255, 255, 0.15); border-radius: 8px; color: #fff; cursor: pointer; font-size: 1.2rem; font-weight: 600; display: flex; justify-content: space-between; align-items: center; transition: all 0.3s ease;">
+        <span>Alfragide</span>
+        <span>→</span>
+      </button>
+      <button onclick="selectLocation('alvalade')" style="padding: 18px 25px; background: rgba(255, 255, 255, 0.05); border: 2px solid rgba(255, 255, 255, 0.15); border-radius: 8px; color: #fff; cursor: pointer; font-size: 1.2rem; font-weight: 600; display: flex; justify-content: space-between; align-items: center; transition: all 0.3s ease;">
+        <span>Alvalade</span>
+        <span>→</span>
+      </button>
+      <button onclick="selectLocation('campo-pequeno')" style="padding: 18px 25px; background: rgba(255, 255, 255, 0.05); border: 2px solid rgba(255, 255, 255, 0.15); border-radius: 8px; color: #fff; cursor: pointer; font-size: 1.2rem; font-weight: 600; display: flex; justify-content: space-between; align-items: center; transition: all 0.3s ease;">
+        <span>Campo Pequeno</span>
+        <span>→</span>
+      </button>
+      <button onclick="selectLocation('leiria')" style="padding: 18px 25px; background: rgba(255, 255, 255, 0.05); border: 2px solid rgba(255, 255, 255, 0.15); border-radius: 8px; color: #fff; cursor: pointer; font-size: 1.2rem; font-weight: 600; display: flex; justify-content: space-between; align-items: center; transition: all 0.3s ease;">
+        <span>Leiria</span>
+        <span>→</span>
+      </button>
+      <button onclick="selectLocation('setubal')" style="padding: 18px 25px; background: rgba(255, 255, 255, 0.05); border: 2px solid rgba(255, 255, 255, 0.15); border-radius: 8px; color: #fff; cursor: pointer; font-size: 1.2rem; font-weight: 600; display: flex; justify-content: space-between; align-items: center; transition: all 0.3s ease;">
+        <span>Setúbal</span>
+        <span>→</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Drawer 2: Bar items -->
+<div id="barDrawer" style="display: none; position: fixed; inset: 0; z-index: 9999; background: radial-gradient(circle at 30% 40%, #113e85 0%, #062b5a 45%, #031c3a 100%);">
+  <div style="position: relative; height: 100%; max-width: 1100px; margin: 0 auto; display: flex; gap: 24px; padding: 32px 24px; box-sizing: border-box; align-items: stretch;">
+    <button onclick="closeAllDrawers()" style="position: absolute; top: 18px; right: 22px; background: #c21633; color: #fff; border: none; width: 42px; height: 42px; border-radius: 50%; font-size: 22px; font-weight: 700; cursor: pointer; box-shadow: 0 6px 14px rgba(0,0,0,0.35);">✕</button>
+
+    <div style="flex: 0 0 36%; background: linear-gradient(180deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%); border-radius: 14px; padding: 30px 26px; color: #fff; display: flex; flex-direction: column; gap: 12px; box-shadow: 0 14px 24px rgba(0,0,0,0.35);">
+      <img src="http://localhost/cinemacity/assets/images/gallery/logo.png" alt="Cinema City" style="width: 120px; height: auto; margin-bottom: 10px;">
+      <h2 id="bar-location-name" style="font-size: 1.6rem; font-weight: 800; margin: 0;">Cinema City</h2>
+      <p id="bar-location-address" style="margin: 0; line-height: 1.5; opacity: 0.9;">Escolhe a tua localização para ver os artigos disponíveis.</p>
+      <div id="bar-location-extra" style="margin-top: 8px; font-weight: 600; opacity: 0.9;"></div>
+    </div>
+
+    <div style="flex: 1; background: #e3e3e3; border-radius: 14px; padding: 26px; box-shadow: 0 18px 30px rgba(0,0,0,0.25); display: flex; flex-direction: column; gap: 22px; overflow-y: auto;">
+      <div>
+        <p style="margin: 0; color: #0a2e63; font-weight: 700;">Deseja algum artigo do bar?</p>
+        <hr style="border: none; border-top: 1px solid rgba(0,0,0,0.08); margin: 10px 0 4px;">
+      </div>
+
+      <div>
+        <p style="margin: 0 0 10px; color: #0a2e63; font-weight: 700;">Menus</p>
+        <div style="display: flex; gap: 18px; flex-wrap: wrap;">
+          <div style="width: 150px; background: #f7f7f7; border-radius: 12px; padding: 12px; text-align: center; box-shadow: 0 10px 18px rgba(0,0,0,0.08);">
+            <div style="width: 120px; height: 100px; margin: 0 auto 10px; background: #fff; border-radius: 10px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+              <img src="http://localhost/cinemacity/assets/images/gallery/PIOC.png" alt="Menu pipocas" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+            </div>
+            <div style="color: #0a2e63; font-weight: 700; font-size: 0.95rem;">Menu pipocas</div>
+          </div>
+          <div style="width: 150px; background: #f7f7f7; border-radius: 12px; padding: 12px; text-align: center; box-shadow: 0 10px 18px rgba(0,0,0,0.08);">
+            <div style="width: 120px; height: 100px; margin: 0 auto 10px; background: #fff; border-radius: 10px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+              <img src="http://localhost/cinemacity/assets/images/gallery/promo2.jpg" alt="Menu a dois" style="max-width: 100%; max-height: 100%; object-fit: cover;">
+            </div>
+            <div style="color: #0a2e63; font-weight: 700; font-size: 0.95rem;">Menu a dois</div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <p style="margin: 0 0 10px; color: #0a2e63; font-weight: 700;">Bebidas</p>
+        <div style="display: flex; gap: 18px; flex-wrap: wrap;">
+          <div style="width: 120px; background: #f7f7f7; border-radius: 12px; padding: 12px; text-align: center; box-shadow: 0 10px 18px rgba(0,0,0,0.08);">
+            <div style="width: 100px; height: 100px; margin: 0 auto 8px; background: #fff; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+              <span style="font-size: 1.6rem; color: #0a2e63;">💧</span>
+            </div>
+            <div style="color: #0a2e63; font-weight: 700; font-size: 0.9rem;">Água</div>
+          </div>
+          <div style="width: 120px; background: #f7f7f7; border-radius: 12px; padding: 12px; text-align: center; box-shadow: 0 10px 18px rgba(0,0,0,0.08);">
+            <div style="width: 100px; height: 100px; margin: 0 auto 8px; background: #fff; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+              <span style="font-size: 1.6rem; color: #0a2e63;">🥤</span>
+            </div>
+            <div style="color: #0a2e63; font-weight: 700; font-size: 0.9rem;">Refrigerantes</div>
+          </div>
+          <div style="width: 120px; background: #f7f7f7; border-radius: 12px; padding: 12px; text-align: center; box-shadow: 0 10px 18px rgba(0,0,0,0.08);">
+            <div style="width: 100px; height: 100px; margin: 0 auto 8px; background: #fff; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+              <span style="font-size: 1.6rem; color: #0a2e63;">⚡</span>
+            </div>
+            <div style="color: #0a2e63; font-weight: 700; font-size: 0.9rem;">Energéticos</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+const locationData = {
+  alfragide: {
+    name: 'Cinema Alegro Alfragide',
+    address: 'Avenida dos Cavaleiros 60, Portela de Carnaxide - 2790-045 Carnaxide',
+    extra: 'Junto ao Parque Alfragide'
+  },
+  alvalade: {
+    name: 'Cinema City Alvalade',
+    address: 'Avenida de Roma 144, 1700-312 Lisboa',
+    extra: 'Metro Alvalade (Linha Verde)'
+  },
+  'campo-pequeno': {
+    name: 'Cinema City Campo Pequeno',
+    address: 'Praça do Campo Pequeno 50B, 1000-081 Lisboa',
+    extra: 'Entrada lateral norte'
+  },
+  leiria: {
+    name: 'Cinema City Leiria',
+    address: 'Rua Comissão de Iniciativa 1, 2410-098 Leiria',
+    extra: 'Centro Comercial'
+  },
+  setubal: {
+    name: 'Cinema City Setúbal',
+    address: 'Avenida Luísa Todi 123, 2900-461 Setúbal',
+    extra: 'Zona ribeirinha'
+  },
+  default: {
+    name: 'Cinema City',
+    address: 'Escolhe uma localização para ver os artigos do bar.',
+    extra: ''
+  }
+};
+
+function openProductDrawer() {
+  const overlay = document.getElementById('drawerOverlay');
+  const locationDrawer = document.getElementById('productDrawer');
+  const barDrawer = document.getElementById('barDrawer');
+  if (overlay && locationDrawer && barDrawer) {
+    barDrawer.style.display = 'none';
+    locationDrawer.style.display = 'block';
+    overlay.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+  }
+}
+
+function openBarDrawer(locationId) {
+  const overlay = document.getElementById('drawerOverlay');
+  const locationDrawer = document.getElementById('productDrawer');
+  const barDrawer = document.getElementById('barDrawer');
+  const info = locationData[locationId] || locationData.default;
+
+  const nameEl = document.getElementById('bar-location-name');
+  const addressEl = document.getElementById('bar-location-address');
+  const extraEl = document.getElementById('bar-location-extra');
+
+  if (nameEl) nameEl.textContent = info.name;
+  if (addressEl) addressEl.textContent = info.address;
+  if (extraEl) extraEl.textContent = info.extra || '';
+
+  if (overlay && locationDrawer && barDrawer) {
+    locationDrawer.style.display = 'none';
+    barDrawer.style.display = 'flex';
+    overlay.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+  }
+}
+
+function closeAllDrawers() {
+  const overlay = document.getElementById('drawerOverlay');
+  const locationDrawer = document.getElementById('productDrawer');
+  const barDrawer = document.getElementById('barDrawer');
+  if (overlay) overlay.style.display = 'none';
+  if (locationDrawer) locationDrawer.style.display = 'none';
+  if (barDrawer) barDrawer.style.display = 'none';
+  document.body.style.overflow = '';
+}
+
+// Expose globally
+window.openProductDrawer = openProductDrawer;
+window.closeAllDrawers = closeAllDrawers;
+window.selectLocation = function(id) {
+  openBarDrawer(id);
+};
+
+// ESC para fechar
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'Escape') {
+    closeAllDrawers();
+  }
+});
+</script>
 
 
     </main>

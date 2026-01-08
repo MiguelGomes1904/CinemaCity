@@ -19,9 +19,32 @@
     "body": "Menus, pipocas, bebidas gourmet e muito mais. Qualidade premium para uma experiência de cinema inesquecível.",
     "cta": {
       "label": "Comprar artigos de bar",
-      "href": "#food"
+      "href": "#",
+      "onclick": "openProductDrawer()"
     }
   },
+  "locations": [
+    {
+      "id": "alfragide",
+      "name": "Alfragide"
+    },
+    {
+      "id": "alvalade",
+      "name": "Alvalade"
+    },
+    {
+      "id": "campo-pequeno",
+      "name": "Campo Pequeno"
+    },
+    {
+      "id": "leiria",
+      "name": "Leiria"
+    },
+    {
+      "id": "setubal",
+      "name": "Setúbal"
+    }
+  ],
   "foodStrip": [
     { "image": "/assets/images/gallery/promo.jpg", "alt": "Pipocas Especiais", "background": "#0b223b" },
     { "image": "/assets/images/gallery/banner.jpg", "alt": "Bebidas Premium", "background": "#0b223b" },
