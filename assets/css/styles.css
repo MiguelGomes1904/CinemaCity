@@ -160,6 +160,25 @@
     font-size: 1em;
 }
 .booking-bar select { background: #fff; }
+.booking-bar input[type="text"] {
+    background: #fff;
+    padding: 10px 16px;
+    border-radius: 6px;
+    border: none;
+    font-size: 1em;
+}
+.booking-bar input[type="text"]:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(11, 42, 90, 0.2);
+}
+.booking-bar > div {
+    flex: 1;
+    position: relative;
+}
+.movie-dropdown {
+    border-radius: 6px;
+    margin-top: -6px;
+}
 .booking-bar button {
     background: #0b2a5a;
     color: #fff;
