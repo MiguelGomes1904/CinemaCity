@@ -10,7 +10,7 @@ body { background: #f0f2f5; font-family: Arial, sans-serif; color: #333; }
 .hero {
   position: relative;
   height: 600px;
-  background: linear-gradient(90deg, rgba(11,47,75,0.9) 0%, rgba(11,47,75,0.6) 40%, transparent 85%), url('../images/gallery/FUNDO.jpg') center/cover no-repeat;
+  background: linear-gradient(270deg, rgba(11,47,75,0.2) 0%, rgba(11,47,75,0.6) 100%), url('../images/gallery/capa 3.jpg') center/cover no-repeat;
   display: flex;
   align-items: center;
 }
@@ -28,6 +28,8 @@ body { background: #f0f2f5; font-family: Arial, sans-serif; color: #333; }
   height: 290px;
   overflow: hidden;
   flex-shrink: 0;
+  display: block;
+  z-index: 10;
 }
 
 .poster-frame img {
@@ -42,6 +44,7 @@ body { background: #f0f2f5; font-family: Arial, sans-serif; color: #333; }
   margin-left: 280px;
   color: white;
   max-width: 500px;
+  text-align: right;
 }
 
 .meta {

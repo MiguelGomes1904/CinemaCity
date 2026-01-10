@@ -3,7 +3,7 @@ const moviesData = [
     {
         title: "DEPOIS DA CAÇAÇA",
         englishTitle: "After The Hunt",
-        image: "/assets/images/gallery/capa1.jpg",
+        image: "assets/images/gallery/capa2.jpg",
         genre: "Animação",
         rating: "M12 - 97 min.",
         meta: "M14 • Ação • 139min.",
