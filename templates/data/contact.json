@@ -1,5 +1,8 @@
 {
   "title": "Contact",
+  "styles": [
+    "/assets/css/contact.css"
+  ],
   "contact": {
     "title": "Get In Touch",
     "subtitle": "Let's discuss your next project or collaboration opportunity",
