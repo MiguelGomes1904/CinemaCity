@@ -1,6 +1,7 @@
 {
   "title": "Produtos - Cinema City",
   "styles": ["/assets/css/products.css"],
+  "scripts": ["/assets/js/products.js"],
   "hero": {
     "background": "#00a5a5",
     "kicker": "Pack Premium",

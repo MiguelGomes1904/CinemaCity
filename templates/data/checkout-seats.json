@@ -1,0 +1,23 @@
+{
+  "title": "Seleção de Lugares - Cinema City",
+  "meta_description": "Selecione os seus lugares para a sessão de cinema.",
+  "meta_keywords": "cinema, reserva de lugares, bilhetes, sessão",
+  "meta_author": "Cinema City",
+  "meta_robots": "noindex,nofollow",
+  "meta_canonical": "https://cinemacity.com/checkout-seats.html",
+  "meta_og_title": "Seleção de Lugares - Cinema City",
+  "meta_og_description": "Escolha os melhores lugares para a sua sessão de cinema.",
+  "meta_og_image": "https://cinemacity.com/assets/images/seats.jpg",
+  "meta_og_url": "https://cinemacity.com/checkout-seats.html",
+  "meta_og_type": "website",
+  "meta_twitter_card": "summary_large_image",
+  "meta_twitter_title": "Seleção de Lugares - Cinema City",
+  "meta_twitter_description": "Escolha os melhores lugares para a sua sessão de cinema.",
+  "meta_twitter_image": "https://cinemacity.com/assets/images/seats.jpg",
+  "styles": [
+    "/assets/css/checkout-seats.css"
+  ],
+  "scripts": [
+    "/assets/js/checkout-seats.js"
+  ]
+}

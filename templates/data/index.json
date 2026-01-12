@@ -1,5 +1,6 @@
 {
   "title": "Cinema City - Home",
+  "scripts": ["/assets/js/index.js"],
   "heroBackground": "/assets/images/gallery/FUNDO.jpg",
   "hero": {
     "actors": "Colin Farrell & Margot Robbie",

@@ -1,6 +1,6 @@
 {{<layout}}
 {{$main}}
-<section id="hero" class="hero" style="background-image: url('{{heroBackground}}');">
+<section id="hero" class="hero" style="background-image: url('{{heroBackground}}');" data-images='{{{heroImagesJSON}}}'>
     <div class="hero-content">
         <h2>{{hero.actors}}</h2>
         <h1>{{hero.title}}</h1>
@@ -88,45 +88,5 @@
     </div>
 </footer>
 
-<script>
-    // Tabs functionality
-    document.querySelectorAll('.category-tab').forEach(tab => {
-        tab.addEventListener('click', function() {
-            document.querySelectorAll('.category-tab').forEach(t => t.classList.remove('active'));
-            this.classList.add('active');
-        });
-    });
-
-    // Show more movies
-    document.getElementById('show-more-btn').addEventListener('click', function() {
-        const hiddenMovies = document.querySelectorAll('.movie-card.hidden');
-        hiddenMovies.forEach(movie => {
-            movie.classList.remove('hidden');
-        });
-        this.style.display = 'none';
-    });
-
-    // Hero carousel: cycles background images and updates dots
-    (function(){
-        const images = JSON.parse('{{{heroImagesJSON}}}');
-        const hero = document.getElementById('hero');
-        const dots = document.querySelectorAll('.carousel-dots span');
-        let current = 0;
-        function setSlide(i){
-            current = (i + images.length) % images.length;
-            hero.style.backgroundImage = "url('" + images[current] + "')";
-            dots.forEach((d, idx) => d.classList.toggle('active', idx === current));
-        }
-        dots.forEach(d => d.addEventListener('click', function(){
-            const idx = parseInt(this.getAttribute('data-index'));
-            setSlide(idx);
-            resetTimer();
-        }));
-        let timer = setInterval(()=> setSlide(current+1), 5000);
-        function resetTimer(){ clearInterval(timer); timer = setInterval(()=> setSlide(current+1), 5000); }
-        // init
-        setSlide(0);
-    })();
-</script>
 {{/main}}
 {{/layout}}
