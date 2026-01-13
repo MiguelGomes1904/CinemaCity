@@ -15,7 +15,9 @@
     {{#cinemas}}
     <div class="cinema-card">
       <img src="{{image}}" alt="{{name}}">
-      <h3>{{name}}</h3>
+      <div class="cinema-overlay">
+        <div class="cinema-name">{{name}}</div>
+      </div>
     </div>
     {{/cinemas}}
   </div>
@@ -76,21 +78,5 @@
     </div>
   </div>
 </section>
-
-<!-- FOOTER -->
-<footer>
-  <div class="container">
-    <div class="footer-content">
-      {{#footerSections}}
-      <div class="footer-col">
-        <h4>{{title}}</h4>
-        {{#items}}
-        <p>{{.}}</p>
-        {{/items}}
-      </div>
-      {{/footerSections}}
-    </div>
-  </div>
-</footer>
 {{/main}}
 {{/layout}}

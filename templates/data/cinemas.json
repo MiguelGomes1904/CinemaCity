@@ -6,11 +6,11 @@
     "description": "O Cinema City é uma das principais redes de cinemas em Portugal, com complexos modernos e salas equipadas para garantir a melhor experiência no grande ecrã. Vem viver o cinema connosco e descobre também os nossos formatos especiais, pensados para tornar cada sessão ainda mais emocionante."
   },
   "cinemas": [
-    {"name": "CINEMA 1", "image": "assets/images/gallery/Cinema 1.jpg"},
-    {"name": "CINEMA 2", "image": "assets/images/gallery/cinema 2.jpg"},
-    {"name": "CINEMA 3", "image": "assets/images/gallery/cinema 3.jpg"},
-    {"name": "CINEMA 4", "image": "assets/images/gallery/cinema 4.jpg"},
-    {"name": "CINEMA 5", "image": "assets/images/gallery/cinema 5.jpg"}
+    {"name": "Cinema Alegro Alfragide", "image": "assets/images/gallery/Cinema 1.jpg"},
+    {"name": "Cinema City Alvalade", "image": "assets/images/gallery/cinema 2.jpg"},
+    {"name": "Cinema City Campo Pequeno", "image": "assets/images/gallery/cinema 3.jpg"},
+    {"name": "Cinema City Leiria", "image": "assets/images/gallery/cinema 4.jpg"},
+    {"name": "Cinema City Setúbal", "image": "assets/images/gallery/cinema 5.jpg"}
   ],
   "membership": {
     "title": "ADIRA JÁ",
