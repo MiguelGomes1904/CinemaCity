@@ -3,7 +3,7 @@ const moviesData = [
     {
         title: "DEPOIS DA CAÇAÇA",
         englishTitle: "After The Hunt",
-        image: "assets/images/gallery/capa2.jpg",
+        image: "assets/images/gallery/capa1.jpg",
         genre: "Animação",
         rating: "M12 - 97 min.",
         meta: "M14 • Ação • 139min.",
@@ -17,7 +17,7 @@ const moviesData = [
     {
         title: "GATO FANTASMA ANZU",
         englishTitle: "Ghost Cat Anzu",
-        image: "/assets/images/gallery/capa 2.jpg",
+        image: "assets/images/gallery/capa 8.jpg",
         genre: "Animação",
         rating: "M12 - 97 min.",
         meta: "M12 • Animação • 97min.",
@@ -31,7 +31,7 @@ const moviesData = [
     {
         title: "UM LADRÃO NO TELHADO",
         englishTitle: "A Thief on the Roof",
-        image: "/assets/images/gallery/capa 3.jpg",
+        image: "assets/images/gallery/capa 3.jpg",
         genre: "Animação",
         rating: "M12 - 97 min.",
         meta: "M12 • Animação • 97min.",
@@ -45,7 +45,7 @@ const moviesData = [
     {
         title: "PARTIR, UM DIA",
         englishTitle: "Departure, One Day",
-        image: "/assets/images/gallery/capa 4.jpg",
+        image: "assets/images/gallery/capa 4.jpg",
         genre: "Animação",
         rating: "M12 - 97 min.",
         meta: "M12 • Animação • 97min.",
@@ -59,7 +59,7 @@ const moviesData = [
     {
         title: "SNOW PRINCESA",
         englishTitle: "Snow Princess",
-        image: "/assets/images/gallery/capa 5.jpg",
+        image: "assets/images/gallery/capa 5.jpg",
         genre: "Animação",
         rating: "M12 - 97 min.",
         meta: "M12 • Animação • 97min.",
@@ -73,7 +73,7 @@ const moviesData = [
     {
         title: "O TELEFONE NEGRO 2",
         englishTitle: "The Black Phone 2",
-        image: "/assets/images/gallery/capa 6.jpg",
+        image: "assets/images/gallery/capa 6.jpg",
         genre: "Animação",
         rating: "M12 - 97 min.",
         meta: "M12 • Animação • 97min.",

@@ -24,12 +24,12 @@
     {"id": "pre-vendas", "name": "PRÉ-VENDAS", "active": false}
   ],
   "movies": [
-    {"title": "DEPOIS DA CAÇAÇA", "image": "/assets/images/gallery/capa1.jpg", "genre": "Animação", "rating": "M12 - 97 min."},
-    {"title": "GATO FANTASMA ANZU", "image": "/assets/images/gallery/capa2.jpg", "genre": "Animação", "rating": "M12 - 97 min."},
-    {"title": "UM LADRÃO NO TELHADO", "image": "/assets/images/gallery/capa%203.jpg", "genre": "Animação", "rating": "M12 - 97 min."},
-    {"title": "PARTIR, UM DIA", "image": "/assets/images/gallery/capa%204.jpg", "genre": "Animação", "rating": "M12 - 97 min."},
-    {"title": "SNOW PRINCESA", "image": "/assets/images/gallery/capa%205.jpg", "genre": "Animação", "rating": "M12 - 97 min."},
-    {"title": "O TELEFONE NEGRO 2", "image": "/assets/images/gallery/capa%206.jpg", "genre": "Animação", "rating": "M12 - 97 min."}
+    {"id": 0, "title": "DEPOIS DA CAÇAÇA", "image": "/assets/images/gallery/capa1.jpg", "genre": "Animação", "rating": "M12 - 97 min."},
+    {"id": 1, "title": "GATO FANTASMA ANZU", "image": "/assets/images/gallery/capa%208.jpg", "genre": "Animação", "rating": "M12 - 97 min."},
+    {"id": 2, "title": "UM LADRÃO NO TELHADO", "image": "/assets/images/gallery/capa%203.jpg", "genre": "Animação", "rating": "M12 - 97 min."},
+    {"id": 3, "title": "PARTIR, UM DIA", "image": "/assets/images/gallery/capa%204.jpg", "genre": "Animação", "rating": "M12 - 97 min."},
+    {"id": 4, "title": "SNOW PRINCESA", "image": "/assets/images/gallery/capa%205.jpg", "genre": "Animação", "rating": "M12 - 97 min."},
+    {"id": 5, "title": "O TELEFONE NEGRO 2", "image": "/assets/images/gallery/capa%206.jpg", "genre": "Animação", "rating": "M12 - 97 min."}
   ],
   "topMovies": [
     {"rank": 1, "title": "The Conjuring 4", "image": "/assets/images/gallery/capa%209.jpg"},
