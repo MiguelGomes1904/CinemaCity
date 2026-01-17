@@ -25,16 +25,16 @@
   ],
   "movies": [
     {"title": "DEPOIS DA CAÇAÇA", "image": "/assets/images/gallery/capa1.jpg", "genre": "Animação", "rating": "M12 - 97 min."},
-    {"title": "GATO FANTASMA ANZU", "image": "/assets/images/gallery/capa 2.jpg", "genre": "Animação", "rating": "M12 - 97 min."},
-    {"title": "UM LADRÃO NO TELHADO", "image": "/assets/images/gallery/capa 3.jpg", "genre": "Animação", "rating": "M12 - 97 min."},
-    {"title": "PARTIR, UM DIA", "image": "/assets/images/gallery/capa 4.jpg", "genre": "Animação", "rating": "M12 - 97 min."},
-    {"title": "SNOW PRINCESA", "image": "/assets/images/gallery/capa 5.jpg", "genre": "Animação", "rating": "M12 - 97 min."},
-    {"title": "O TELEFONE NEGRO 2", "image": "/assets/images/gallery/capa 6.jpg", "genre": "Animação", "rating": "M12 - 97 min."}
+    {"title": "GATO FANTASMA ANZU", "image": "/assets/images/gallery/capa2.jpg", "genre": "Animação", "rating": "M12 - 97 min."},
+    {"title": "UM LADRÃO NO TELHADO", "image": "/assets/images/gallery/capa%203.jpg", "genre": "Animação", "rating": "M12 - 97 min."},
+    {"title": "PARTIR, UM DIA", "image": "/assets/images/gallery/capa%204.jpg", "genre": "Animação", "rating": "M12 - 97 min."},
+    {"title": "SNOW PRINCESA", "image": "/assets/images/gallery/capa%205.jpg", "genre": "Animação", "rating": "M12 - 97 min."},
+    {"title": "O TELEFONE NEGRO 2", "image": "/assets/images/gallery/capa%206.jpg", "genre": "Animação", "rating": "M12 - 97 min."}
   ],
   "topMovies": [
-    {"rank": 1, "title": "The Conjuring 4", "image": "/assets/images/gallery/capa 9.jpg"},
-    {"rank": 2, "title": "Abril", "image": "/assets/images/gallery/capa 10.jpg"},
-    {"rank": 3, "title": "Jolly LLB 3", "image": "/assets/images/gallery/capa 12.jpg"}
+    {"rank": 1, "title": "The Conjuring 4", "image": "/assets/images/gallery/capa%209.jpg"},
+    {"rank": 2, "title": "Abril", "image": "/assets/images/gallery/capa%2010.jpg"},
+    {"rank": 3, "title": "Jolly LLB 3", "image": "/assets/images/gallery/capa%2012.jpg"}
   ],
   "vipBanner": "/assets/images/gallery/banner.jpg",
   "promoPacks": [

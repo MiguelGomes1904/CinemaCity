@@ -2,8 +2,8 @@
 // Cinema City Database Connection
 // Database connection details for Cinema City project
 $host = 'localhost';
-$username = 'root';
-$password = ''; // Update with your MySQL password if needed
+$username = 'if0_40926481';
+$password = 'Mirandela2324'; // Update with your MySQL password if needed
 $database = 'cinemacity'; // Cinema City database
 
 // Create a connection

@@ -27,7 +27,6 @@
               <li><a href="/CinemaCity/index.html">Home</a></li>
               <li><a href="/CinemaCity/cinemas.html">Cinemas</a></li>
               <li><a href="/CinemaCity/products.html">Products</a></li>
-              <li><a href="/CinemaCity/services.html">Serviços</a></li>
               <li><a href="/CinemaCity/index.html#destaques">Destaques</a></li>
             </ul>
             <div class="search-login">

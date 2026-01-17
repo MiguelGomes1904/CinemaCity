@@ -8,13 +8,39 @@ document.querySelectorAll('.category-tab').forEach(tab => {
     });
 });
 
+// Initialize: Hide movies after the first 4
+(function() {
+    const movieCards = document.querySelectorAll('.movie-list .movie-card');
+    const initialVisible = 4;
+    
+    movieCards.forEach((card, index) => {
+        if (index >= initialVisible) {
+            card.classList.add('hidden');
+        }
+    });
+    
+    // Hide button if there are no extra movies
+    const showMoreBtn = document.getElementById('show-more-btn');
+    if (movieCards.length <= initialVisible) {
+        showMoreBtn.style.display = 'none';
+    }
+})();
+
 // Show more movies
 document.getElementById('show-more-btn').addEventListener('click', function() {
-    const hiddenMovies = document.querySelectorAll('.movie-card.hidden');
-    hiddenMovies.forEach(movie => {
-        movie.classList.remove('hidden');
-    });
-    this.style.display = 'none';
+    const hiddenMovies = document.querySelectorAll('.movie-list .movie-card.hidden');
+    const showCount = 6; // Show 6 more movies at a time
+    
+    // Show next batch of movies
+    for (let i = 0; i < showCount && i < hiddenMovies.length; i++) {
+        hiddenMovies[i].classList.remove('hidden');
+    }
+    
+    // Hide button if no more hidden movies
+    const remainingHidden = document.querySelectorAll('.movie-list .movie-card.hidden');
+    if (remainingHidden.length === 0) {
+        this.style.display = 'none';
+    }
 });
 
 // Hero carousel: cycles background images and updates dots

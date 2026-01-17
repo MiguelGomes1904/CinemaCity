@@ -1,0 +1,35 @@
+{{< layout}}
+
+{{$main}}
+<div class="login-container">
+    <div class="login-card">
+        <h1>Bem-vindo ao Cinema City</h1>
+        <h2>Iniciar Sessão</h2>
+        
+        <form id="loginForm" class="login-form">
+            <div class="form-group">
+                <label for="username">Numero de telefone ou email</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            
+            <button type="submit" class="btn-primary">Entrar</button>
+            
+            <button type="button" class="btn-google">
+                <img src="https://www.google.com/favicon.ico" alt="Google"> Continuar com Google
+            </button>
+            
+            <div class="login-links">
+                <a href="#" class="recover-password">Recuperar password</a>
+                <p>Ainda não está registado? <a href="register.html" class="create-account">Criar conta</a></p>
+            </div>
+        </form>
+    </div>
+</div>
+{{/main}}
+
+{{/layout}}

@@ -1,0 +1,11 @@
+{
+  "title": "Login - Cinema City",
+  "description": "Inicie sessão no Cinema City para reservar bilhetes e aceder a promoções exclusivas.",
+  "keywords": "cinema city, login, iniciar sessão, entrar",
+  "styles": [
+    "/assets/css/login.css"
+  ],
+  "scripts": [
+    "/assets/js/login.js"
+  ]
+}
