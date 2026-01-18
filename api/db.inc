@@ -1,10 +1,10 @@
 <?php
 // Cinema City Database Connection
-// Database connection details for Cinema City project
-$host = 'localhost';
-$username = 'if0_40926481';
-$password = 'Mirandela2324'; // Update with your MySQL password if needed
-$database = 'cinemacity'; // Cinema City database
+// Prefer environment variables; fallback to local XAMPP defaults
+$host = getenv('DB_HOST') ?: 'localhost';
+$username = getenv('DB_USER') ?: 'root';
+$password = getenv('DB_PASS') ?: '';
+$database = getenv('DB_NAME') ?: 'cinemacity';
 
 // Create a connection
 $conn = new mysqli($host, $username, $password, $database);
