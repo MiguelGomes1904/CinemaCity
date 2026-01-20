@@ -20,12 +20,12 @@
         <meta name="twitter:image" content="">
     <!-- Latest compiled and minified CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">    
-    <link rel="stylesheet" href="http://localhost/cinemacity/assets/css/styles.css">
-    <link rel="stylesheet" href="http://localhost/cinemacity/assets/css/destaques.css">
-    <link rel="stylesheet" href="http://localhost/cinemacity/assets/css/product-drawer.css">
+    <link rel="stylesheet" href="https://cinemacity.infinityfreeapp.com/assets/css/styles.css">
+    <link rel="stylesheet" href="https://cinemacity.infinityfreeapp.com/assets/css/destaques.css">
+    <link rel="stylesheet" href="https://cinemacity.infinityfreeapp.com/assets/css/product-drawer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
-     <link rel="stylesheet" href="http://localhost/cinemacity/assets/css/products.css">
+     <link rel="stylesheet" href="https://cinemacity.infinityfreeapp.com/assets/css/products.css">
        
     
   </head>
@@ -57,7 +57,7 @@
         
 
 <section class="products-hero" style="background-color: #00a5a5;">
-  <img src="http://localhost/cinemacity/assets/images/gallery/promo2.jpg" alt="Pack Total" class="hero-banner-img">
+  <img src="https://cinemacity.infinityfreeapp.com/assets/images/gallery/promo2.jpg" alt="Pack Total" class="hero-banner-img">
 </section>
 
 <section class="products-intro">
@@ -68,7 +68,7 @@
       <button type="button" class="btn" onclick="console.log('Button clicked!'); openProductDrawer(); return false;">Comprar artigos de bar</button>
     </div>
     <div class="products-intro-image">
-      <img src="http://localhost/cinemacity/assets/images/gallery/PIOC.png" alt="Pipocas">
+      <img src="https://cinemacity.infinityfreeapp.com/assets/images/gallery/PIOC.png" alt="Pipocas">
     </div>
   </div>
 </section>
@@ -91,7 +91,7 @@
         <div class="banner-price">10,50€</div>
       </div>
       <div class="banner-image">
-        <img src="http://localhost/cinemacity/assets/images/gallery/banner.jpg" alt="Pack Quartas">
+        <img src="https://cinemacity.infinityfreeapp.com/assets/images/gallery/banner.jpg" alt="Pack Quartas">
       </div>
     </div>
     <div class="promo-banner" style="background-color: #00a5a5;">
@@ -102,7 +102,7 @@
         <div class="banner-price">11,50€</div>
       </div>
       <div class="banner-image">
-        <img src="http://localhost/cinemacity/assets/images/gallery/promo2.jpg" alt="Pack Total">
+        <img src="https://cinemacity.infinityfreeapp.com/assets/images/gallery/promo2.jpg" alt="Pack Total">
       </div>
     </div>
   </div>
@@ -152,42 +152,63 @@
 
 <!-- Drawer 2: Bar items -->
 <div id="barDrawer" style="display: none; position: fixed; inset: 0; z-index: 9999; background: radial-gradient(circle at 30% 40%, #113e85 0%, #062b5a 45%, #031c3a 100%);">
-    <div style="position: relative; height: 100%; max-width: 1100px; margin: 0 auto; display: flex; gap: 24px; padding: 32px 24px; box-sizing: border-box; align-items: stretch;">
+  <div style="position: relative; height: 100%; max-width: 1100px; margin: 0 auto; display: flex; gap: 24px; padding: 32px 24px; box-sizing: border-box; align-items: stretch;">
     <button onclick="closeAllDrawers()" style="position: absolute; top: 18px; right: 22px; background: #c21633; color: #fff; border: none; width: 42px; height: 42px; border-radius: 50%; font-size: 22px; font-weight: 700; cursor: pointer; box-shadow: 0 6px 14px rgba(0,0,0,0.35);">✕</button>
 
     <div style="flex: 0 0 36%; background: linear-gradient(180deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%); border-radius: 14px; padding: 30px 26px; color: #fff; display: flex; flex-direction: column; gap: 12px; box-shadow: 0 14px 24px rgba(0,0,0,0.35);">
-      <img src="http://localhost/cinemacity/assets/images/gallery/logo.png" alt="Cinema City" style="width: 120px; height: auto; margin-bottom: 10px;">
+      <img src="https://cinemacity.infinityfreeapp.com/assets/images/gallery/logo.png" alt="Cinema City" style="width: 120px; height: auto; margin-bottom: 10px;">
       <h2 id="bar-location-name" style="font-size: 1.6rem; font-weight: 800; margin: 0;">Cinema City</h2>
       <p id="bar-location-address" style="margin: 0; line-height: 1.5; opacity: 0.9;">Escolhe a tua localização para ver os artigos disponíveis.</p>
       <div id="bar-location-extra" style="margin-top: 8px; font-weight: 600; opacity: 0.9;"></div>
-      <div id="cart-panel" style="margin-top: 18px; background: rgba(0,0,0,0.25); border-radius: 10px; padding: 12px; display: flex; flex-direction: column; gap: 8px;">
-        <div style="font-weight: 700;">Carrinho</div>
-        <div id="cart-items" style="font-size: 0.95rem; display: flex; flex-direction: column; gap: 6px;"></div>
-        <div style="display: flex; justify-content: space-between; font-weight: 700;">
-          <span>Total:</span><span id="cart-total">0,00€</span>
-        </div>
-        <div style="display: flex; flex-direction: column; gap: 6px;">
-          <input id="order-name" type="text" placeholder="Nome" style="padding: 8px; border-radius: 6px; border: none;">
-          <input id="order-email" type="email" placeholder="Email" style="padding: 8px; border-radius: 6px; border: none;">
-          <input id="order-phone" type="tel" placeholder="Telemóvel" style="padding: 8px; border-radius: 6px; border: none;">
-          <select id="order-payment" style="padding: 8px; border-radius: 6px; border: none;">
-            <option value="">Método de pagamento</option>
-            <option value="card">Cartão</option>
-            <option value="mbway">MB Way</option>
-            <option value="cash">Numerário</option>
-          </select>
-        </div>
-        <button id="checkout-products" style="margin-top: 6px; padding: 10px; background: #ffb703; color: #0a2e63; border: none; border-radius: 8px; font-weight: 800; cursor: pointer;">Confirmar compra</button>
-        <div id="cart-message" style="font-size: 0.9rem; color: #ffdcdc;"></div>
-      </div>
     </div>
 
-    <div style="flex: 1; background: #e3e3e3; border-radius: 14px; padding: 26px; box-shadow: 0 18px 30px rgba(0,0,0,0.25); display: flex; flex-direction: column; gap: 14px; overflow-y: auto;">
+    <div style="flex: 1; background: #e3e3e3; border-radius: 14px; padding: 26px; box-shadow: 0 18px 30px rgba(0,0,0,0.25); display: flex; flex-direction: column; gap: 22px; overflow-y: auto;">
       <div>
         <p style="margin: 0; color: #0a2e63; font-weight: 700;">Deseja algum artigo do bar?</p>
         <hr style="border: none; border-top: 1px solid rgba(0,0,0,0.08); margin: 10px 0 4px;">
       </div>
-      <div id="bar-products-container" style="display: flex; flex-direction: column; gap: 16px;"></div>
+
+      <div>
+        <p style="margin: 0 0 10px; color: #0a2e63; font-weight: 700;">Menus</p>
+        <div style="display: flex; gap: 18px; flex-wrap: wrap;">
+          <div style="width: 150px; background: #f7f7f7; border-radius: 12px; padding: 12px; text-align: center; box-shadow: 0 10px 18px rgba(0,0,0,0.08);">
+            <div style="width: 120px; height: 100px; margin: 0 auto 10px; background: #fff; border-radius: 10px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+              <img src="https://cinemacity.infinityfreeapp.com/assets/images/gallery/PIOC.png" alt="Menu pipocas" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+            </div>
+            <div style="color: #0a2e63; font-weight: 700; font-size: 0.95rem;">Menu pipocas</div>
+          </div>
+          <div style="width: 150px; background: #f7f7f7; border-radius: 12px; padding: 12px; text-align: center; box-shadow: 0 10px 18px rgba(0,0,0,0.08);">
+            <div style="width: 120px; height: 100px; margin: 0 auto 10px; background: #fff; border-radius: 10px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+              <img src="https://cinemacity.infinityfreeapp.com/assets/images/gallery/promo2.jpg" alt="Menu a dois" style="max-width: 100%; max-height: 100%; object-fit: cover;">
+            </div>
+            <div style="color: #0a2e63; font-weight: 700; font-size: 0.95rem;">Menu a dois</div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <p style="margin: 0 0 10px; color: #0a2e63; font-weight: 700;">Bebidas</p>
+        <div style="display: flex; gap: 18px; flex-wrap: wrap;">
+          <div style="width: 120px; background: #f7f7f7; border-radius: 12px; padding: 12px; text-align: center; box-shadow: 0 10px 18px rgba(0,0,0,0.08);">
+            <div style="width: 100px; height: 100px; margin: 0 auto 8px; background: #fff; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+              <span style="font-size: 1.6rem; color: #0a2e63;">💧</span>
+            </div>
+            <div style="color: #0a2e63; font-weight: 700; font-size: 0.9rem;">Água</div>
+          </div>
+          <div style="width: 120px; background: #f7f7f7; border-radius: 12px; padding: 12px; text-align: center; box-shadow: 0 10px 18px rgba(0,0,0,0.08);">
+            <div style="width: 100px; height: 100px; margin: 0 auto 8px; background: #fff; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+              <span style="font-size: 1.6rem; color: #0a2e63;">🥤</span>
+            </div>
+            <div style="color: #0a2e63; font-weight: 700; font-size: 0.9rem;">Refrigerantes</div>
+          </div>
+          <div style="width: 120px; background: #f7f7f7; border-radius: 12px; padding: 12px; text-align: center; box-shadow: 0 10px 18px rgba(0,0,0,0.08);">
+            <div style="width: 100px; height: 100px; margin: 0 auto 8px; background: #fff; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+              <span style="font-size: 1.6rem; color: #0a2e63;">⚡</span>
+            </div>
+            <div style="color: #0a2e63; font-weight: 700; font-size: 0.9rem;">Energéticos</div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -221,9 +242,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/4.0.0/mustache.min.js"></script>
-    <script src="http://localhost/cinemacity/assets/js/main.js"></script>
-    <script src="http://localhost/cinemacity/assets/js/booking-bar.js"></script>
-     <script src="http://localhost/cinemacity/assets/js/products.js" crossorigin="anonymous"></script>
+    <script src="https://cinemacity.infinityfreeapp.com/assets/js/main.js"></script>
+    <script src="https://cinemacity.infinityfreeapp.com/assets/js/booking-bar.js"></script>
+     <script src="https://cinemacity.infinityfreeapp.com/assets/js/products.js" crossorigin="anonymous"></script>
        
       
    </body>
