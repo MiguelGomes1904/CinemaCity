@@ -174,6 +174,7 @@ function renderProducts(list) {
         <div style="font-weight:700; color:#0a2e63; font-size:0.95rem; min-height:38px;">${prod.name}</div>
         <div style="color:#333; font-size:0.9rem;">${priceLabel}</div>
         <div style="font-size:0.85rem; color:${prod.stock>0 ? '#0a2e63':'#c21633'};">Stock: ${prod.stock ?? 0}</div>
+        <div style="font-size:0.85rem; color:${prod.stock>0 ? '#0a2e63':'#c21633'};">Categoria: ${prod.category || 'Outros'}</div>
         <div style="display:flex; gap:8px; align-items:center;">
           <input type="number" min="1" max="${prod.stock ?? 0}" value="1" style="width:60px; padding:6px; border-radius:6px; border:1px solid #ccc;" ${prod.stock>0 ? '' : 'disabled'}>
           <button ${prod.stock>0 ? '' : 'disabled'} style="flex:1; padding:8px; background:#ffb703; color:#0a2e63; border:none; border-radius:8px; font-weight:700; cursor:pointer;">Adicionar</button>

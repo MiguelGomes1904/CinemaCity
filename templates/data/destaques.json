@@ -33,6 +33,17 @@
       "textColor": "#003d7a"
     },
     {
+      "id": "apresentação",
+      "title": "Apresentação",
+      "subtitle": "Ganhe descontos no Cinema City",
+      "description": "Viu poupar no filme. A ver os trailers? Cinema City parceiro da Lidl, para que suas visitas ao filme de sua família tenham grande qualidade garantida.",
+      "discount": "40%",
+      "image": "assets/images/lidl-promo.jpg",
+      "bgColor": "#ffc107",
+      "textColor": "#003d7a"
+    },
+    
+    {
       "id": "terror",
       "title": "DUPLO TERROR HALLOWEEN",
       "subtitle": "13€",

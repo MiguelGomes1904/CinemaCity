@@ -3,8 +3,8 @@
   "scripts": ["assets/js/index.js"],
   "heroBackground": "assets/images/gallery/FUNDO.jpg",
   "hero": {
-    "actors": "Colin Farrell & Margot Robbie",
-    "title": "Uma Grande, Corajosa e Bela Viagem",
+    "actors": "Novo Filme",
+    "title": "Novo filme",
     "subtitle": "Exclusivo em cinemas",
     "date": "18 de Setembro",
     "carouselDots": [

@@ -85,12 +85,12 @@
     display: block;
 }
 .hero {
-    background: url('../images/gallery/FUNDO.jpg') center/cover no-repeat;
+    background-color: #0000;
     position: relative;
     min-height: 68vh;
     display: flex;
     align-items: center;
-    color: #fff;
+    color: #ffffff;
     text-align: center;
 }
 .hero::after {
@@ -137,6 +137,19 @@
     background: rgba(255,255,255,0.7);
     border-radius: 50%;
     margin: 0 6px;
+}
+.announcement-banner {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    font-weight: bold;
+    font-size: 14px;
+    position: relative;
+    z-index: 1000;
+}
+.announcement-banner p {
+    margin: 0;
 }
 .carousel-dots span.active{background:#d32f2f;width:12px;height:12px;}
 .booking-bar {
@@ -351,7 +364,7 @@
     font-size: 20rem;
     color: transparent;
     -webkit-text-stroke: 4px #DF1B3B;
-    text-stroke: 4px #DF1B3B;
+    -webkit-text-stroke: 4px #DF1B3B;
     opacity: 1;
     z-index: -1;
     font-weight: 900;

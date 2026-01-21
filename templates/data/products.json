@@ -56,6 +56,7 @@
       "name": "Pack Quartas",
       "details": "Pipoca pequena + Bebida média + Bilhete cinema",
       "price": "10,50€",
+      "categoria": "Pipocas",
       "image": "assets/images/gallery/banner.jpg",
       "color": "#f6a821",
       "featured": true
@@ -64,6 +65,7 @@
       "name": "Pack Total",
       "details": "Pipoca pequena + Bebida 50cl + Bilhete cinema",
       "price": "11,50€",
+      "categoria": "Bebidas",
       "image": "assets/images/gallery/promo2.jpg",
       "color": "#00a5a5",
       "featured": true
