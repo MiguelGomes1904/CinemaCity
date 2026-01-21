@@ -1,0 +1,59 @@
+{
+  "title": "Depois da Caçada — CinemaCity",
+  "styles": ["assets/css/movie.css"],
+  "movie": {
+    "title": "Depois da Caçada",
+    "originalTitle": "After The Hunt",
+    "poster": "assets/images/gallery/capa2.jpg",
+    "rating": "M14",
+    "genre": "Ação",
+    "duration": "139min",
+    "description": "Um intenso drama psicológico sobre uma professora universitária (Julia Roberts) que se vê numa encruzilhada pessoal e profissional quando um aluno destacado faz uma acusação que muda tudo.",
+    "synopsis": "AFTER THE HUNT é um intenso drama psicológico sobre uma professora universitária (Julia Roberts) que se vê numa encruzilhada pessoal e profissional quando um aluno destacado (Ayo Edebiri) faz uma acusação contra um dos seus colegas (Andrew Garfield), e um segredo sombrio do seu próprio passado ameaça vir à tona.",
+    "actors": "Julia Roberts, Ayo Edebiri, Andrew Garfield",
+    "director": "Luca Guadagnino",
+    "country": "Estados Unidos",
+    "releaseDate": "01-01-1970"
+  },
+  "tabs": [
+    { "name": "Hoje", "active": true },
+    { "name": "Amanhã", "active": false },
+    { "name": "Quarta feira 22/10", "active": false }
+  ],
+  "filters": [
+    { "name": "Todos", "active": true },
+    { "name": "Alfragide", "active": false },
+    { "name": "Leiria", "active": false },
+    { "name": "Setúbal", "active": false },
+    { "name": "Alvalade", "active": false }
+  ],
+  "cinemas": [
+    {
+      "name": "Alfragide",
+      "times": ["11:30", "23:00"]
+    },
+    {
+      "name": "Alvalade",
+      "times": ["11:30", "23:00"]
+    },
+    {
+      "name": "Campo Pequeno",
+      "times": ["11:30", "23:00"]
+    },
+    {
+      "name": "Setúbal",
+      "times": ["11:30", "23:00"]
+    },
+    {
+      "name": "Leiria",
+      "times": ["11:30", "23:00"]
+    }
+  ],
+  "promos": {
+    "main": "assets/images/gallery/promo.jpg",
+    "secondary": [
+      "assets/images/gallery/promo2.jpg",
+      "assets/images/gallery/banner.jpg"
+    ]
+  }
+}

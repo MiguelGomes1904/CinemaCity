@@ -1,5 +1,7 @@
 // Products Page JavaScript - Cinema City
 // Dynamic bar items, cart and order submission
+const apiBase = window.location.pathname.includes('/CinemaCity/') ? '/CinemaCity/api/' : 'api/';
+
 const locationData = {
   alfragide: {
     name: 'Cinema Alegro Alfragide',
@@ -36,6 +38,19 @@ const locationData = {
 let productsCache = [];
 let cart = [];
 let selectedLocation = '';
+const fallbackProducts = [
+  { id: 9001, name: 'Pack Quartas', category: 'Packs', price: 10.5, stock: 99, image_url: 'assets/images/gallery/banner.jpg' },
+  { id: 9002, name: 'Pack Total', category: 'Packs', price: 11.5, stock: 99, image_url: 'assets/images/gallery/promo2.jpg' },
+  { id: 9003, name: 'Menu Pipocas', category: 'Pipocas', price: 6.0, stock: 99, image_url: 'assets/images/gallery/PIOC.png' },
+  { id: 9004, name: 'Bebida 50cl', category: 'Bebidas', price: 3.0, stock: 99, image_url: 'assets/images/gallery/promo.jpg' },
+  { id: 9005, name: 'Água', category: 'Bebidas', price: 2.0, stock: 99, image_url: '' }
+];
+
+function findProductByName(name){
+  const target = (name || '').toLowerCase();
+  return productsCache.find(p => (p.name || '').toLowerCase() === target) ||
+         productsCache.find(p => (p.name || '').toLowerCase().includes(target));
+}
 
 document.addEventListener('DOMContentLoaded', () => {
   loadProducts();
@@ -93,6 +108,7 @@ window.closeAllDrawers = closeAllDrawers;
 window.selectLocation = function(id) {
   openBarDrawer(id);
 };
+window.addPack = addPack;
 
 // ESC para fechar
 document.addEventListener('keydown', function(event) {
@@ -111,14 +127,16 @@ function bindCartActions() {
 
 async function loadProducts() {
   try {
-    const res = await fetch('/CinemaCity/api/list-products.php');
+    const res = await fetch(`${apiBase}list-products.php`);
     const data = await res.json();
     if (!data.success) throw new Error(data.message || 'Erro ao carregar produtos');
     productsCache = data.products || [];
     renderProducts(productsCache);
   } catch (err) {
     console.error('Produtos:', err);
-    setMessage('Erro ao carregar artigos de bar.', true);
+    setMessage('Erro ao carregar artigos de bar. A mostrar lista base.', true);
+    productsCache = fallbackProducts;
+    renderProducts(productsCache);
   }
 }
 
@@ -147,12 +165,14 @@ function renderProducts(list) {
     byCat[cat].forEach(prod => {
       const card = document.createElement('div');
       card.style.cssText = 'width: 180px; background:#f7f7f7; border-radius:12px; padding:12px; box-shadow:0 10px 18px rgba(0,0,0,0.08); display:flex; flex-direction:column; gap:6px;';
+      const priceVal = Number(prod.price || 0);
+      const priceLabel = priceVal.toFixed(2).replace('.', ',') + '€';
       card.innerHTML = `
         <div style="width:100%; height:120px; background:#fff; border-radius:10px; display:flex; align-items:center; justify-content:center; overflow:hidden;">
           <img src="${prod.image_url || 'https://via.placeholder.com/150'}" alt="${prod.name}" style="max-width:100%; max-height:100%; object-fit:contain;">
         </div>
         <div style="font-weight:700; color:#0a2e63; font-size:0.95rem; min-height:38px;">${prod.name}</div>
-        <div style="color:#333; font-size:0.9rem;">${(parseFloat(prod.price)||0).toFixed(2).replace('.', ',')}€</div>
+        <div style="color:#333; font-size:0.9rem;">${priceLabel}</div>
         <div style="font-size:0.85rem; color:${prod.stock>0 ? '#0a2e63':'#c21633'};">Stock: ${prod.stock ?? 0}</div>
         <div style="display:flex; gap:8px; align-items:center;">
           <input type="number" min="1" max="${prod.stock ?? 0}" value="1" style="width:60px; padding:6px; border-radius:6px; border:1px solid #ccc;" ${prod.stock>0 ? '' : 'disabled'}>
@@ -185,6 +205,24 @@ function addToCart(prod, qty) {
   }
   renderCart();
   setMessage(`${prod.name} adicionado ao carrinho.`);
+}
+
+function addPack(packName) {
+  if (!packName) return;
+  if (!productsCache.length) {
+    setMessage('A carregar produtos, tenta novamente.', true);
+    return;
+  }
+  const prod = findProductByName(packName);
+  if (!prod) {
+    setMessage(`Pack "${packName}" não encontrado.`, true);
+    return;
+  }
+  if (prod.stock !== null && prod.stock !== undefined && prod.stock <= 0) {
+    setMessage(`Sem stock para ${prod.name}.`, true);
+    return;
+  }
+  addToCart(prod, 1);
 }
 
 function renderCart() {
@@ -243,14 +281,16 @@ async function submitOrder() {
   };
 
   try {
-    const res = await fetch('/CinemaCity/api/create-product-order.php', {
+    const res = await fetch(`${apiBase}create-product-order.php`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload)
     });
     const data = await res.json();
-    if (!data.success) throw new Error(data.message || 'Erro ao registar compra');
-    setMessage('Compra registada com sucesso!');
+    if (!res.ok || !data.success) {
+      throw new Error(data.message || 'Erro ao registar compra');
+    }
+    setMessage('Artigos de bar registados.');
     cart = [];
     renderCart();
   } catch (err) {

@@ -1,5 +1,5 @@
 {
-  "siteUrl": "https://cinemacity.infinityfreeapp.com",
+  "siteUrl": "",
   "mustache.compiler": {
     "templates": "templates/pages",
     "layouts": "templates/layouts",

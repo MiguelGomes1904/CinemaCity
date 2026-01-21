@@ -15,9 +15,9 @@
   "meta_twitter_description": "Escolha os melhores lugares para a sua sessão de cinema.",
   "meta_twitter_image": "https://cinemacity.com/assets/images/seats.jpg",
   "styles": [
-    "/assets/css/checkout-seats.css"
+    "assets/css/checkout-seats.css"
   ],
   "scripts": [
-    "/assets/js/checkout-seats.js"
+    "assets/js/checkout-seats.js"
   ]
 }

@@ -1,0 +1,94 @@
+{{<layout}}
+{{$main}}
+  <!-- HERO -->
+  <section class="hero">
+    <div class="poster-frame">
+      <img src="{{movie.poster}}" alt="{{movie.title}}">
+    </div>
+    <div class="hero-content">
+      <div class="meta">{{movie.rating}} • {{movie.genre}} • {{movie.duration}}</div>
+      <h1>{{movie.title}}</h1>
+      <div class="subtitle">{{movie.originalTitle}}</div>
+      <p>{{movie.description}}</p>
+      <a href="#sessoes" class="btn-cta">Ver Sessões →</a>
+    </div>
+  </section>
+
+  <!-- BOOKING BAR -->
+  <section class="booking-bar">
+    <select><option>Escolha um Cinema</option></select>
+    <select><option>Escolha um Filme</option></select>
+    <select><option>Data</option></select>
+    <select><option>Hora</option></select>
+    <button>Comprar bilhetes</button>
+  </section>
+
+  <!-- SINOPSE -->
+  <section class="synopsis">
+    <div class="container">
+      <div class="content-grid">
+        <div class="col-left">
+          <h3>Sinopse:</h3>
+          <p>{{movie.synopsis}}</p>
+        </div>
+        <div class="divider"></div>
+        <div class="col-right">
+          <h3>Detalhes</h3>
+          <p><strong>Atores:</strong> {{movie.actors}}</p>
+          <p><strong>Realizador:</strong> {{movie.director}}</p>
+          <p><strong>País:</strong> {{movie.country}}</p>
+          <p><strong>Estreia:</strong> {{movie.releaseDate}}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TABS -->
+  <section class="tabs">
+    <div class="container">
+      <div class="tab-group">
+        {{#tabs}}
+        <div class="tab {{#active}}active{{/active}}">{{name}}</div>
+        {{/tabs}}
+      </div>
+    </div>
+  </section>
+
+  <!-- CINEMA LIST -->
+  <section id="sessoes" class="cinemas">
+    <div class="container">
+      <div class="grid-2col">
+        <div class="filters-col">
+          {{#filters}}
+          <button class="filter-btn {{#active}}active{{/active}}">{{name}}</button>
+          {{/filters}}
+        </div>
+        <div class="cards-col">
+          {{#cinemas}}
+          <div class="card">
+            <div class="card-name">{{name}}</div>
+            <div class="card-times">
+              {{#times}}
+              <span class="time">{{.}}</span>
+              {{/times}}
+            </div>
+          </div>
+          {{/cinemas}}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROMOS -->
+  <section class="promos">
+    <div class="container">
+      <div class="promo" style="height:140px;background-image:url('{{promos.main}}');background-size:cover;border-radius:6px"></div>
+      <div class="promo-row">
+        {{#promos.secondary}}
+        <div class="promo" style="height:160px;background-image:url('{{.}}');background-size:cover"></div>
+        {{/promos.secondary}}
+      </div>
+    </div>
+  </section>
+{{/main}}
+{{/layout}}

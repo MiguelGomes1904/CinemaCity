@@ -22,16 +22,16 @@
       const fallback = `
         <header>
           <nav class="navbar">
-            <div class="logo"><img src="assets/images/gallery/logo.png" alt="Cinema City Logo"></div>
+            <div class="logo"><a href="index.html"><img src="assets/images/gallery/logo.png" alt="Cinema City Logo"></a></div>
             <ul class="nav-links">
-              <li><a href="/CinemaCity/index.html">Home</a></li>
-              <li><a href="/CinemaCity/cinemas.html">Cinemas</a></li>
-              <li><a href="/CinemaCity/products.html">Products</a></li>
-              <li><a href="/CinemaCity/index.html#destaques">Destaques</a></li>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="cinemas.html">Cinemas</a></li>
+              <li><a href="products.html">Produtos</a></li>
+              <li><a href="destaques.html">Destaques</a></li>
             </ul>
             <div class="search-login">
               <input type="text" placeholder="Pesquise por filme, actores, realizadores">
-              <a class="login-btn" href="/CinemaCity/login.html" title="Login">
+              <a class="login-btn" href="login.html" title="Login">
                 <img src="assets/images/gallery/login-icon.svg" alt="Login" class="login-icon">
               </a>
             </div>

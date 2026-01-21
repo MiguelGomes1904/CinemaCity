@@ -1,7 +1,7 @@
 {
   "title": "Cinema City - Home",
-  "scripts": ["/assets/js/index.js"],
-  "heroBackground": "/assets/images/gallery/FUNDO.jpg",
+  "scripts": ["assets/js/index.js"],
+  "heroBackground": "assets/images/gallery/FUNDO.jpg",
   "hero": {
     "actors": "Colin Farrell & Margot Robbie",
     "title": "Uma Grande, Corajosa e Bela Viagem",
@@ -15,7 +15,7 @@
       {"index": 4, "active": false}
     ]
   },
-  "heroImagesJSON": "[\"/CinemaCity/assets/images/gallery/FUNDO.jpg\",\"/CinemaCity/assets/images/gallery/banner.jpg\",\"/CinemaCity/assets/images/gallery/promo.jpg\",\"/CinemaCity/assets/images/gallery/promo2.jpg\",\"/CinemaCity/assets/images/gallery/capa1.jpg\"]",
+  "heroImagesJSON": "[\"assets/images/gallery/FUNDO.jpg\",\"assets/images/gallery/banner.jpg\",\"assets/images/gallery/promo.jpg\",\"assets/images/gallery/promo2.jpg\",\"assets/images/gallery/capa1.jpg\"]",
   "categories": [
     {"id": "big-vip", "name": "BIG VIP", "active": true},
     {"id": "brevemente", "name": "BREVEMENTE", "active": false},
@@ -24,22 +24,22 @@
     {"id": "pre-vendas", "name": "PRÉ-VENDAS", "active": false}
   ],
   "movies": [
-    {"id": 0, "title": "DEPOIS DA CAÇAÇA", "image": "/assets/images/gallery/capa1.jpg", "genre": "Animação", "rating": "M12 - 97 min."},
-    {"id": 1, "title": "GATO FANTASMA ANZU", "image": "/assets/images/gallery/capa%208.jpg", "genre": "Animação", "rating": "M12 - 97 min."},
-    {"id": 2, "title": "UM LADRÃO NO TELHADO", "image": "/assets/images/gallery/capa%203.jpg", "genre": "Animação", "rating": "M12 - 97 min."},
-    {"id": 3, "title": "PARTIR, UM DIA", "image": "/assets/images/gallery/capa%204.jpg", "genre": "Animação", "rating": "M12 - 97 min."},
-    {"id": 4, "title": "SNOW PRINCESA", "image": "/assets/images/gallery/capa%205.jpg", "genre": "Animação", "rating": "M12 - 97 min."},
-    {"id": 5, "title": "O TELEFONE NEGRO 2", "image": "/assets/images/gallery/capa%206.jpg", "genre": "Animação", "rating": "M12 - 97 min."}
+    {"id": 0, "title": "DEPOIS DA CAÇAÇA", "image": "assets/images/gallery/capa1.jpg", "genre": "Animação", "rating": "M12 - 97 min."},
+    {"id": 1, "title": "GATO FANTASMA ANZU", "image": "assets/images/gallery/capa 8.jpg", "genre": "Animação", "rating": "M12 - 97 min."},
+    {"id": 2, "title": "UM LADRÃO NO TELHADO", "image": "assets/images/gallery/capa 3.jpg", "genre": "Animação", "rating": "M12 - 97 min."},
+    {"id": 3, "title": "PARTIR, UM DIA", "image": "assets/images/gallery/capa 4.jpg", "genre": "Animação", "rating": "M12 - 97 min."},
+    {"id": 4, "title": "SNOW PRINCESA", "image": "assets/images/gallery/capa 5.jpg", "genre": "Animação", "rating": "M12 - 97 min."},
+    {"id": 5, "title": "O TELEFONE NEGRO 2", "image": "assets/images/gallery/capa 6.jpg", "genre": "Animação", "rating": "M12 - 97 min."}
   ],
   "topMovies": [
-    {"rank": 1, "title": "The Conjuring 4", "image": "/assets/images/gallery/capa%209.jpg"},
-    {"rank": 2, "title": "Abril", "image": "/assets/images/gallery/capa%2010.jpg"},
-    {"rank": 3, "title": "Jolly LLB 3", "image": "/assets/images/gallery/capa%2012.jpg"}
+    {"rank": 1, "title": "The Conjuring 4", "image": "assets/images/gallery/capa 9.jpg"},
+    {"rank": 2, "title": "Abril", "image": "assets/images/gallery/capa 10.jpg"},
+    {"rank": 3, "title": "Jolly LLB 3", "image": "assets/images/gallery/capa 12.jpg"}
   ],
-  "vipBanner": "/assets/images/gallery/banner.jpg",
+  "vipBanner": "assets/images/gallery/banner.jpg",
   "promoPacks": [
-    {"title": "Pack Quartas", "image": "/assets/images/gallery/promo.jpg", "description": "Pack Quartas - Pipoca Pequena, Bebida Média, Bilhete Cinema"},
-    {"title": "Pack Total", "image": "/assets/images/gallery/promo2.jpg", "description": "Pack Total - Pipocas Pequena, Bebida 50cl, Bilhete"}
+    {"title": "Pack Quartas", "image": "assets/images/gallery/promo.jpg", "description": "Pack Quartas - Pipoca Pequena, Bebida Média, Bilhete Cinema"},
+    {"title": "Pack Total", "image": "assets/images/gallery/promo2.jpg", "description": "Pack Total - Pipocas Pequena, Bebida 50cl, Bilhete"}
   ],
   "footerSections": [
     {
